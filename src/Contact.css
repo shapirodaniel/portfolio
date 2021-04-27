@@ -6,8 +6,8 @@
 	height: 4em;
 	border-radius: 40px;
 	background-color: #f9c2da;
-	color: #5b1a34;
-	box-shadow: 3px 5px 0px purple;
+	color: var(--nightDarkAccent);
+	box-shadow: 3px 5px 0px var(--nightBoxShadowSolid);
 
 	display: flex;
 	align-items: center;
@@ -21,7 +21,6 @@
 
 .copyright {
 	padding-left: 2em;
-	font-weight: bold;
 	font-size: 1.4em;
 }
 
@@ -39,11 +38,12 @@
 	width: 120px;
 	padding: 0.5em;
 	border-radius: 5px;
+	background-color: inherit;
 	transition: background-color 0.1s ease;
 }
 
 .icons a:hover {
-	background-color: #d6769c;
+	background-color: var(--nightLightAccent);
 }
 
 .linkIcon {
