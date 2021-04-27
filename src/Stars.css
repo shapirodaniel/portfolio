@@ -1,8 +1,14 @@
 .sky {
-	height: 900px;
-	width: 100vw;
-	align-self: flex-start;
 	position: relative;
+}
+
+.pinkMoon {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 20em;
+	width: auto;
+	object-position: 2em 4.2em;
 }
 
 @keyframes twinkle {
