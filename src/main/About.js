@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css';
+import TechList from './TechList';
 
 const aboutCards = [
 	{
@@ -51,8 +52,13 @@ const About = () => {
 					<AboutCard key={card.id} card={card} />
 				))}
 			</div>
-			<div>
-				<img src='https://i.imgur.com/FEcY5qC.jpg' alt='daniel-headshot' />
+			<div className='photosAndTech'>
+				<img
+					className='my-photo'
+					src='https://i.imgur.com/FEcY5qC.jpg'
+					alt='daniel-headshot'
+				/>
+				<TechList />
 			</div>
 		</section>
 	);

@@ -1,0 +1,33 @@
+.techLogoUrls {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	font-size: 2em;
+}
+
+.techLogoUrls img {
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	object-fit: cover;
+	background: transparent;
+	margin: 0.3em;
+	background-color: white;
+}
+
+.techLogoUrls > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 60%;
+}
+
+.techLogoUrls > label {
+	text-align: center;
+	width: 60%;
+	padding: 1em 0;
+}
