@@ -1,6 +1,6 @@
 import React from 'react';
-import AboutCard from './AboutCard';
-import './About.css';
+import PortfolioCard from './PortfolioCard';
+import './Portfolio.css';
 
 const cards = [
 	{
@@ -33,19 +33,19 @@ const cards = [
 	},
 ];
 
-const About = () => {
+const Portfolio = () => {
 	return (
-		<section className='aboutContainer'>
+		<section className='portfolioContainer'>
 			<h3>
-				<span>About</span>
+				<span>Portfolio</span>
 			</h3>
-			<div className='aboutCards'>
+			<div className='portfolioCards'>
 				{cards.map(card => (
-					<AboutCard key={card.id} card={card} />
+					<PortfolioCard key={card.id} card={card} />
 				))}
 			</div>
 		</section>
 	);
 };
 
-export default About;
+export default Portfolio;

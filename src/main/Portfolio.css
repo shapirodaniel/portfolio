@@ -1,4 +1,4 @@
-.aboutContainer {
+.portfolioContainer {
 	height: 900px;
 	width: 100%;
 	font-size: 2em;
@@ -6,16 +6,16 @@
 	text-align: center;
 }
 
-.aboutContainer h3 {
+.portfolioContainer h3 {
 	padding: 1em;
 	font-weight: 400;
 }
 
-.aboutContainer h3 span {
+.portfolioContainer h3 span {
 	border-bottom: 2px solid white;
 }
 
-.aboutCards {
+.portfolioCards {
 	display: flex;
 	width: 100vw;
 	overflow-x: auto;

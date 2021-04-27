@@ -1,11 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './Welcome.css';
 
 const Welcome = () => {
-	const welcomeRef = useRef(null);
-
 	return (
-		<section ref={welcomeRef} className='welcomeContainer'>
+		<section className='welcomeContainer'>
 			<h1>
 				Hello, I'm <span className='myName'>Daniel Shapiro.</span>
 				<br />
@@ -14,7 +12,7 @@ const Welcome = () => {
 			<div
 				className='viewMyWork'
 				onClick={() => {
-					welcomeRef.current.nextElementSibling.scrollIntoView({
+					document.querySelector('.aboutContainer').scrollIntoView({
 						behavior: 'smooth',
 					});
 				}}
