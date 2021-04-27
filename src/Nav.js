@@ -1,41 +1,22 @@
 import React from 'react';
 import './Nav.css';
 
-const navLinks = [
-	{
-		id: 1,
-		name: 'home',
-	},
-	{
-		id: 2,
-		name: 'about',
-	},
-	{
-		id: 3,
-		name: 'portfolio',
-	},
-	{
-		id: 4,
-		name: 'contact',
-	},
-	{
-		id: 5,
-		name: 'about',
-	},
-];
-
-const NavLink = ({ name }) => {
-	return <div>{name}</div>;
-};
+// vertical scroll takes a classSelector .sectionName
+const scrollIntoView = classSelector =>
+	document.querySelector(classSelector).scrollIntoView({ behavior: 'smooth' });
 
 const Nav = () => {
 	return (
 		<nav>
-			<div className='linksContainer'>
-				{navLinks.map(({ id, name }) => (
-					<NavLink key={id} name={name} />
-				))}
-			</div>
+			<span onClick={() => scrollIntoView('.welcomeContainer')}>Home</span>
+			<span onClick={() => scrollIntoView('.aboutContainer')}>About</span>
+			<span onClick={() => scrollIntoView('.recruiterContainer')}>
+				<i className='material-icons'>star</i>Recruiters
+			</span>
+			<span onClick={() => scrollIntoView('.portfolioContainer')}>
+				Portfolio
+			</span>
+			<span onClick={() => scrollIntoView('.contactContainer')}>Contact</span>
 		</nav>
 	);
 };
