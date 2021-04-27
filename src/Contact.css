@@ -1,5 +1,5 @@
 .contactContainer {
-	width: 60vw;
+	width: calc(100vw - 31.4em);
 	position: absolute;
 	bottom: 2em;
 	left: 4.6em;
@@ -34,7 +34,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: min-content;
+	height: auto;
 	width: 120px;
 	padding: 0.5em;
 	border-radius: 5px;
@@ -49,4 +49,43 @@
 .linkIcon {
 	height: 40px;
 	width: auto;
+}
+
+@media screen and (max-width: 1040px) {
+	.copyright {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 930px) {
+	.contactContainer {
+		width: calc(100vw - 13.4em);
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.contactContainer {
+		width: calc(100vw - 6em);
+		margin: 0 auto;
+		position: fixed;
+		bottom: 2em;
+		left: 1em;
+	}
+
+	.copyright {
+		font-size: 18px;
+		padding-left: 2em;
+	}
+
+	.linkIcon {
+		height: 32px;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.copyright {
+		font-size: 14px;
+		padding-left: 1em;
+	}
 }
