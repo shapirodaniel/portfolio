@@ -1,9 +1,23 @@
+/* PortfolioCard */
+
+.portfolioCardContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 180px;
+	min-height: 200px;
+	padding: 1em;
+	border: 1px solid white;
+	margin: 0 0.3em;
+}
+
 .portfolioContainer {
-	height: 900px;
-	width: 100%;
-	font-size: 2em;
+	padding-top: 4em;
+}
+
+.portfolioContainer h3 {
 	color: white;
-	text-align: center;
 }
 
 .portfolioCards {

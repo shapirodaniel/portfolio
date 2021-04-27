@@ -1,37 +1,46 @@
 import React from 'react';
-import PortfolioCard from './PortfolioCard';
 import './Portfolio.css';
 
 const cards = [
 	{
 		id: 1,
-		img: 'https://source.unsplash.com/random',
+		src: 'https://source.unsplash.com/random',
 		name: 'projectName',
 		description: 'projectDescription',
 		href: 'projectHref',
 	},
 	{
 		id: 2,
-		img: 'https://source.unsplash.com/random',
+		src: 'https://source.unsplash.com/random',
 		name: 'projectName',
 		description: 'projectDescription',
 		href: 'projectHref',
 	},
 	{
 		id: 3,
-		img: 'https://source.unsplash.com/random',
+		src: 'https://source.unsplash.com/random',
 		name: 'projectName',
 		description: 'projectDescription',
 		href: 'projectHref',
 	},
 	{
 		id: 4,
-		img: 'https://source.unsplash.com/random',
+		src: 'https://source.unsplash.com/random',
 		name: 'projectName',
 		description: 'projectDescription',
 		href: 'projectHref',
 	},
 ];
+
+const PortfolioCard = ({ card }) => {
+	const { src, name, description, href } = card;
+
+	return (
+		<div className='portfolioCardContainer'>
+			<span></span>
+		</div>
+	);
+};
 
 const Portfolio = () => {
 	return (
