@@ -20,10 +20,10 @@ let starsArray = new Array(400).fill(null).map((_star, idx) => (
 
 const Stars = () => {
 	return (
-		<>
+		<section className='skyContainer'>
 			<div className='sky'>{starsArray}</div>
 			<img className='pinkMoon' src='/pink-moon.png' alt='pink-moon' />
-		</>
+		</section>
 	);
 };
 

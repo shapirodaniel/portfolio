@@ -30,8 +30,8 @@ h1 {
 	color: white;
 	font-size: 22px;
 	cursor: pointer;
-	transition: background-color 0.4s ease;
-	transition: color 0.4s ease;
+	transition: color 0.4s ease-in-out;
+	transition: background-color 0.4s ease-in;
 }
 
 .viewMyWork span {
@@ -44,8 +44,8 @@ h1 {
 }
 
 .viewMyWork:hover {
-	background-color: white;
 	color: var(--dayTextColor);
+	background-color: white;
 }
 
 .viewMyWork:hover i {
