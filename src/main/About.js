@@ -4,9 +4,7 @@ import './About.css';
 const About = () => {
 	return (
 		<section className='aboutContainer'>
-			<h3>
-				<span>About</span>
-			</h3>
+			<h3>About</h3>
 		</section>
 	);
 };

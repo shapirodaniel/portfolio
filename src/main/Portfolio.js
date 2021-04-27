@@ -36,9 +36,7 @@ const cards = [
 const Portfolio = () => {
 	return (
 		<section className='portfolioContainer'>
-			<h3>
-				<span>Portfolio</span>
-			</h3>
+			<h3>Portfolio</h3>
 			<div className='portfolioCards'>
 				{cards.map(card => (
 					<PortfolioCard key={card.id} card={card} />

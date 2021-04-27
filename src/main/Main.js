@@ -1,14 +1,12 @@
 import React from 'react';
-import Nav from './Nav';
-import About from './About';
-import Stars from './Stars';
-import Contact from './Contact';
+import { Nav, About, Stars, Portfolio, Contact } from './';
 
 const Main = () => {
 	return (
 		<main>
 			<Nav />
 			<About />
+			<Portfolio />
 			<Stars>
 				<Contact />
 			</Stars>
