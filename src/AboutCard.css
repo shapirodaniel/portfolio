@@ -1,0 +1,11 @@
+.aboutCardContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-width: 180px;
+	min-height: 200px;
+	padding: 1em;
+	border: 1px solid white;
+	margin: 0 0.3em;
+}

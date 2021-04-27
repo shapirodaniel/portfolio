@@ -1,16 +1,12 @@
 import './App.css';
 import Welcome from './Welcome';
-import About from './About';
-import Stars from './Stars';
-import Contact from './Contact';
+import Main from './Main';
 
 function App() {
 	return (
 		<div className='appContainer'>
-			<Stars />
-			<Contact />
 			<Welcome />
-			<About />
+			<Main />
 		</div>
 	);
 }

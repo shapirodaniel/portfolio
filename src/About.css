@@ -5,3 +5,19 @@
 	color: white;
 	text-align: center;
 }
+
+.aboutContainer h3 {
+	padding: 1em;
+	font-weight: 400;
+}
+
+.aboutContainer h3 span {
+	border-bottom: 2px solid white;
+}
+
+.aboutCards {
+	display: flex;
+	width: 100vw;
+	overflow-x: auto;
+	justify-content: flex-start;
+}

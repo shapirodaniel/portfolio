@@ -1,5 +1,9 @@
-.sky {
+.skyContainer {
+	height: 1800px;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .pinkMoon {
