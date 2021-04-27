@@ -10,7 +10,7 @@ const aboutCards = [
 	},
 	{
 		id: 2,
-		icon: 'next_plan',
+		icon: 'psychology',
 		title: 'Strategist',
 		description: "I'm a proven project manager across multiple industries.",
 	},
@@ -24,7 +24,7 @@ const aboutCards = [
 		id: 4,
 		icon: 'track_changes',
 		title: 'Chameleon',
-		description: `Design is always in flux—let\'s discover and pivot together.`,
+		description: "Design is always in flux—let's discover and pivot together.",
 	},
 ];
 
@@ -46,11 +46,13 @@ const About = () => {
 	return (
 		<section className='aboutContainer'>
 			<h3>ABOUT</h3>
-
 			<div className='aboutCardsList'>
 				{aboutCards.map(card => (
 					<AboutCard key={card.id} card={card} />
 				))}
+			</div>
+			<div>
+				<img src='https://i.imgur.com/FEcY5qC.jpg' alt='daniel-headshot' />
 			</div>
 		</section>
 	);

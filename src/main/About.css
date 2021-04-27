@@ -1,21 +1,3 @@
-/* About */
-
-.aboutContainer {
-	height: 100vh;
-	padding-top: 4em;
-}
-
-.aboutContainer h3 {
-	color: white;
-}
-
-.aboutCardsList {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	justify-content: space-evenly;
-}
-
 /* AboutCard */
 
 .aboutCardContainer {
@@ -54,4 +36,28 @@
 	font-weight: 300;
 	text-align: center;
 	line-height: 1.3em;
+}
+
+/* About */
+
+.aboutContainer {
+	height: 100vh;
+	padding-top: 4em;
+}
+
+.aboutContainer h3 {
+	color: white;
+}
+
+.aboutCardsList {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-evenly;
+}
+
+.aboutContainer img {
+	height: 300px;
+	width: auto;
+	box-shadow: 10px 10px 20px var(--dayTextColor);
 }
