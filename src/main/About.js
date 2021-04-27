@@ -52,12 +52,27 @@ const About = () => {
 					<AboutCard key={card.id} card={card} />
 				))}
 			</div>
-			<div className='photosAndTech'>
-				<img
-					className='my-photo'
-					src='https://i.imgur.com/FEcY5qC.jpg'
-					alt='daniel-headshot'
-				/>
+			<div className='photoAndTech'>
+				<div className='myPhotoAndBlurb'>
+					<img
+						className='myPhoto'
+						src='https://i.imgur.com/FEcY5qC.jpg'
+						alt='daniel-headshot'
+					/>
+					<div className='blurb'>
+						<span>What I'm up to currently</span>
+						<p>
+							Learning TypeScript, TypeGraphQL, and TypeORM
+							<br />
+							Writing a{' '}
+							<a href='https://github.com/shapirodaniel/random-facts-generator'>
+								React-like framework
+							</a>
+							<br />
+							Teaching at Fullstack Academy!
+						</p>
+					</div>
+				</div>
 				<TechList />
 			</div>
 		</section>
