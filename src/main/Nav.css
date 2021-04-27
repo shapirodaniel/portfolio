@@ -20,3 +20,7 @@ nav span {
 nav span:hover {
 	border-bottom: 1px solid white;
 }
+
+nav span:hover i {
+	color: gold;
+}
