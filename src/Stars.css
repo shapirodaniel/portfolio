@@ -1,0 +1,6 @@
+.sky {
+	height: 900px;
+	width: 100vw;
+	align-self: flex-start;
+	position: relative;
+}
