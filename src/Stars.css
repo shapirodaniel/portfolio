@@ -4,3 +4,18 @@
 	align-self: flex-start;
 	position: relative;
 }
+
+@keyframes twinkle {
+	0% {
+		color: gold;
+		filter: brightness(0.75);
+	}
+	50% {
+		color: white;
+		filter: brightness(1.75);
+	}
+	100% {
+		color: gold;
+		filter: brightness(0.75);
+	}
+}
