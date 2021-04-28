@@ -65,11 +65,15 @@ const About = () => {
 							Learning TypeScript, TypeGraphQL, and TypeORM
 							<br />
 							Writing a{' '}
-							<a href='https://github.com/shapirodaniel/random-facts-generator'>
+							<a
+								href='https://github.com/shapirodaniel/react-clone'
+								target='_blank'
+								rel='noreferrer'
+							>
 								React-like framework
 							</a>
 							<br />
-							Teaching at Fullstack Academy!
+							Teaching Fellow at Fullstack Academy!
 						</p>
 					</div>
 				</div>

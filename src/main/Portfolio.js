@@ -23,13 +23,6 @@ const cards = [
 		description: 'projectDescription',
 		href: 'projectHref',
 	},
-	{
-		id: 4,
-		src: 'https://source.unsplash.com/random',
-		name: 'projectName',
-		description: 'projectDescription',
-		href: 'projectHref',
-	},
 ];
 
 const PortfolioCard = ({ card }) => {

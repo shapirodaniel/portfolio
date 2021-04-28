@@ -7,6 +7,10 @@
 	--nightBoxShadowSolid: purple;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 *,
 html {
 	line-height: 1em;

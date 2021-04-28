@@ -15,6 +15,8 @@ const Welcome = () => {
 					document.querySelector('.aboutContainer').scrollIntoView({
 						behavior: 'smooth',
 					});
+					document.querySelector('#welcome').classList.toggle('activeClass');
+					document.querySelector('#about').classList.toggle('activeClass');
 				}}
 			>
 				<span>View my work</span>
