@@ -15,6 +15,9 @@ const Welcome = () => {
 					document.querySelector('.aboutContainer').scrollIntoView({
 						behavior: 'smooth',
 					});
+
+					// hack to manipulate activeClass on nav elements
+					// when navigating from welcome page to about page
 					document.querySelector('#welcome').classList.toggle('activeClass');
 					document.querySelector('#about').classList.toggle('activeClass');
 				}}

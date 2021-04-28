@@ -3,26 +3,43 @@
 .portfolioCardContainer {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	min-width: 180px;
-	min-height: 200px;
-	padding: 1em;
-	border: 1px solid white;
-	margin: 0 0.3em;
+	margin: 0 auto;
+	position: relative;
+	box-shadow: 10px 10px 0 var(--nightLightAccent);
+	margin: 1em 0;
 }
+
+.portfolioCardContainer img {
+	height: 440px;
+}
+
+.popover {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
+	background-color: white;
+}
+
+.portfolioCardContainer:hover .popover {
+	display: flex;
+}
+
+/* Portfolio */
 
 .portfolioContainer {
 	padding-top: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 }
 
 .portfolioContainer h3 {
 	color: white;
-}
-
-.portfolioCards {
-	display: flex;
-	width: 100vw;
-	overflow-x: auto;
-	justify-content: flex-start;
 }
