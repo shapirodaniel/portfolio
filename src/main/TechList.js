@@ -2,36 +2,39 @@ import React from 'react';
 import './TechList.css';
 
 const proficient = [
-	'https://i.imgur.com/I3h729Y.png',
-	'https://i.imgur.com/cvqE34m.png',
-	'https://i.imgur.com/HfEls2w.png',
-	'https://i.imgur.com/bSICAJ1.png',
-	'https://i.imgur.com/lS2CtBm.png',
-	'https://i.imgur.com/kamBzOw.png',
-	'https://i.imgur.com/T6UediO.png',
-	'https://i.imgur.com/5gpC9Q9.png',
-	'https://i.imgur.com/TyGAIFH.png',
-	'https://i.imgur.com/0fax8zt.png',
-	'https://i.imgur.com/9M20e1b.png',
+	{ src: 'https://i.imgur.com/I3h729Y.png', text: 'JavaScript' },
+	{ src: 'https://i.imgur.com/cvqE34m.png', text: 'React' },
+	{ src: 'https://i.imgur.com/HfEls2w.png', text: 'Redux' },
+	{ src: 'https://i.imgur.com/bSICAJ1.png', text: 'HTML' },
+	{ src: 'https://i.imgur.com/lS2CtBm.png', text: 'CSS' },
+	{ src: 'https://i.imgur.com/kamBzOw.png', text: 'Node.js' },
+	{ src: 'https://i.imgur.com/T6UediO.png', text: 'PostgreSQL' },
+	{ src: 'https://i.imgur.com/5gpC9Q9.png', text: 'Sequelize' },
+	{ src: 'https://i.imgur.com/TyGAIFH.png', text: 'Express' },
+	{ src: 'https://i.imgur.com/0fax8zt.png', text: 'Git' },
+	{ src: 'https://i.imgur.com/9M20e1b.png', text: 'Travis-CI' },
 ];
 
 const learning = [
-	'https://i.imgur.com/jkSzrTz.png',
-	'https://i.imgur.com/aILyU5h.png',
-	'https://i.imgur.com/yavFkOG.png',
-	'https://i.imgur.com/ed1G33y.png',
-	'https://i.imgur.com/sm4i82J.png',
+	{ src: 'https://i.imgur.com/jkSzrTz.png', text: 'TypeScript' },
+	{ src: 'https://i.imgur.com/aILyU5h.png', text: 'TypeORM' },
+	{ src: 'https://i.imgur.com/yavFkOG.png', text: 'GraphQL' },
+	{ src: 'https://i.imgur.com/ed1G33y.png', text: 'Python' },
+	{ src: 'https://i.imgur.com/sm4i82J.png', text: 'Rust' },
 ];
 
 const SingleList = ({ label, logos }) => (
-	<>
+	<div className='singleList'>
 		<label>{label}</label>
-		<div className={label.toLowerCase()}>
-			{logos.map((url, idx) => (
-				<img className='techLogo' key={idx} src={url} alt='tech-logo' />
+		<div className={'singleListImgs'}>
+			{logos.map(({ src, text }, idx) => (
+				<div className='logoAndText'>
+					<img className='techLogo' key={idx} src={src} alt='tech-logo' />
+					<span className='smol'>{text}</span>
+				</div>
 			))}
 		</div>
-	</>
+	</div>
 );
 
 const TechList = () => {
