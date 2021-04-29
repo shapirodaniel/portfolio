@@ -1,24 +1,5 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './TechList.css';
-
-const links = [
-	'https://i.imgur.com/sm4i82Jb.png',
-	'https://i.imgur.com/ed1G33yb.png',
-	'https://i.imgur.com/HfEls2wb.png',
-	'https://i.imgur.com/cvqE34mb.png',
-	'https://i.imgur.com/T6UediOb.png',
-	'https://i.imgur.com/kamBzOwb.png',
-	'https://i.imgur.com/9M20e1bb.png',
-	'https://i.imgur.com/jkSzrTzb.png',
-	'https://i.imgur.com/bSICAJ1b.png',
-	'https://i.imgur.com/I3h729Yb.png',
-	'https://i.imgur.com/5gpC9Q9b.png',
-	'https://i.imgur.com/yavFkOGb.png',
-	'https://i.imgur.com/TyGAIFHb.png',
-	'https://i.imgur.com/0fax8ztb.png',
-	'https://i.imgur.com/lS2CtBmb.png',
-	'https://i.imgur.com/aILyU5hb.png',
-];
 
 const proficient = [
 	{ src: 'https://i.imgur.com/I3h729Y.png', text: 'JavaScript' },
@@ -42,19 +23,23 @@ const learning = [
 	{ src: 'https://i.imgur.com/sm4i82J.png', text: 'Rust' },
 ];
 
+const LogoContainer = ({ src, text }) => (
+	<div className='fullLogoContainer'>
+		<div className='round'>
+			<div className='logoAndText'>
+				<img className='techLogo' src={src} alt='tech-logo' />
+			</div>
+		</div>
+		<span className='smol'>{text}</span>
+	</div>
+);
+
 const SingleList = ({ label, logos }) => (
 	<div className='singleList'>
 		<label>{label}</label>
 		<div className={'singleListImgs'}>
 			{logos.map(({ src, text }, idx) => (
-				<div className='fullLogoContainer'>
-					<div className='round'>
-						<div className='logoAndText'>
-							<img className='techLogo' key={idx} src={src} alt='tech-logo' />
-						</div>
-					</div>
-					<span className='smol'>{text}</span>
-				</div>
+				<LogoContainer key={idx} src={src} text={text} />
 			))}
 		</div>
 	</div>

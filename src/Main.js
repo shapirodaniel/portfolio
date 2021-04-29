@@ -1,6 +1,6 @@
 import React from 'react';
 import './Main.css';
-import { Nav, About, Stars, Portfolio, Contact } from './main';
+import { Nav, About, Stars, Portfolio, Contact } from './main/';
 
 const Main = () => {
 	return (
