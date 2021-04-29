@@ -54,6 +54,7 @@ const About = () => {
 			</div>
 			<div className='photoAndTech'>
 				<div className='myPhotoAndBlurb'>
+					<img className='funArrow' src='/fun-arrow.png' alt='fun-arrow' />
 					<img
 						className='myPhoto'
 						src='https://i.imgur.com/FEcY5qC.jpg'
