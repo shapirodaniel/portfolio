@@ -2,61 +2,49 @@
 
 .portfolioCardContainer {
 	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-	position: relative;
 	box-shadow: 10px 10px 0 var(--nightLightAccent);
-	margin: 1em 0;
+	width: 90%;
+	max-width: 1000px;
+	margin: 2em auto;
+	background-color: white;
 }
 
-.portfolioCardContainer img {
-	height: 440px;
+.pc-rightPanel {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 100%;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 1em;
+}
+
+.pc-rightPanel img {
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
 }
 
 .btnsContainer {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: space-between;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	background: transparent;
-	z-index: 10;
-}
-
-.btnsContainer span {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	padding: 1em;
-	background-color: black;
-	opacity: 0.6;
-	cursor: pointer;
 }
 
-.btnsContainer span i {
-	color: white;
-	font-size: 2em;
+.btnsContainer a {
 	text-decoration: none;
-	filter: brightness(100);
 }
 
-.popover {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-
+.btnsContainer a span {
+	padding: 1em;
 	background-color: white;
+	color: var(--dayTextColor);
+	transition: background-color 0.2s ease;
 }
 
-.portfolioCardContainer:hover .popover {
-	display: flex;
+.btnsContainer a span:hover {
+	background-color: var(--nightLightAccent);
 }
 
 /* Portfolio */
