@@ -1,6 +1,6 @@
 import './App.css';
 import Welcome from './Welcome';
-import { Main } from './main';
+import Main from './Main';
 
 function App() {
 	return (
