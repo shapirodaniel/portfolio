@@ -1,21 +1,19 @@
 import React from 'react';
 import YoutubeEmbed from './YoutubeEmbed';
-import './Portfolio.css';
 import { portfolioContent } from './portfolioContent';
+import './Portfolio.css';
 
 const LeftPanelLinkedImg = ({
 	siteHref,
 	linkedImgUrl,
 	linkedImgUrlAltText,
-}) => {
-	return (
-		<div className='leftPanelContainer'>
-			<a href={siteHref} target='_blank' rel='noreferrer'>
-				<img src={linkedImgUrl} alt={linkedImgUrlAltText} />
-			</a>
-		</div>
-	);
-};
+}) => (
+	<div className='leftPanelContainer'>
+		<a href={siteHref} target='_blank' rel='noreferrer'>
+			<img src={linkedImgUrl} alt={linkedImgUrlAltText} />
+		</a>
+	</div>
+);
 
 const PortfolioCard = ({ card }) => {
 	const {
@@ -71,17 +69,15 @@ const PortfolioCard = ({ card }) => {
 	);
 };
 
-const Portfolio = () => {
-	return (
-		<section className='portfolioContainer'>
-			<h3>PORTFOLIO</h3>
-			<div className='portfolioCards'>
-				{portfolioContent.map(card => (
-					<PortfolioCard key={card.id} card={card} />
-				))}
-			</div>
-		</section>
-	);
-};
+const Portfolio = () => (
+	<section className='portfolioContainer'>
+		<h3>PORTFOLIO</h3>
+		<div className='portfolioCards'>
+			{portfolioContent.map(card => (
+				<PortfolioCard key={card.id} card={card} />
+			))}
+		</div>
+	</section>
+);
 
 export default Portfolio;
