@@ -7,8 +7,8 @@ const portfolioCards = [
 	{
 		id: 1,
 		embedId: '2UeevSTOnIs',
-		src: '/note-ary-logo.png',
-		altText: 'note-ary-logo',
+		logoSrc: '/note-ary-logo.png',
+		logoAltText: 'note-ary-logo',
 		description:
 			'A project management suite that allows users to create and join organizations, invite teammates to collaborate on projects with Kanban-style boards, and stay in touch with realtime updates/communication support',
 		techStack: [
@@ -27,9 +27,10 @@ const portfolioCards = [
 	},
 	{
 		id: 2,
-		embedId: 'https://i.imgur.com/DBQZsXM.png',
-		src: '',
-		altText: '',
+		logoSrc: '/guessing-game-logo.png',
+		logoAltText: 'the-guessing-game',
+		linkedImgUrl: '/guessing-game-medium-screencap.png',
+		linkedImgUrlAltText: 'the-guessing-game',
 		name: 'The Guessing Game',
 		description:
 			"A detailed look into refactoring an imperative code base to React, React Hooks, and state management via React's Context API",
@@ -41,8 +42,8 @@ const portfolioCards = [
 	{
 		id: 3,
 		embedId: 'https://i.imgur.com/UFlcEUI.png',
-		src: '',
-		altText: '',
+		logoSrc: '',
+		logoAltText: '',
 		name: "Bread Baker's Friend",
 		description:
 			'A web app designed for artisan bakery production floors, allowing dynamic recipe recalculation and alterations, export to dynamic spreadsheets, and recipe file storage + upload',
@@ -52,11 +53,27 @@ const portfolioCards = [
 	},
 ];
 
+const LeftPanelLinkedImg = ({
+	siteHref,
+	linkedImgUrl,
+	linkedImgUrlAltText,
+}) => {
+	return (
+		<div className='leftPanelContainer'>
+			<a href={siteHref} target='_blank' rel='noreferrer'>
+				<img src={linkedImgUrl} alt={linkedImgUrlAltText} />
+			</a>
+		</div>
+	);
+};
+
 const PortfolioCard = ({ card }) => {
 	const {
 		embedId,
-		src,
-		altText,
+		linkedImgUrl,
+		linkedImgUrlAltText,
+		logoSrc,
+		logoAltText,
 		description,
 		techStack,
 		siteHref,
@@ -65,17 +82,25 @@ const PortfolioCard = ({ card }) => {
 
 	return (
 		<div className='portfolioCardContainer'>
-			<YoutubeEmbed embedId={embedId} />
+			{embedId ? (
+				<YoutubeEmbed embedId={embedId} />
+			) : (
+				<LeftPanelLinkedImg
+					siteHref={siteHref}
+					linkedImgUrl={linkedImgUrl}
+					linkedImgUrlAltText={linkedImgUrlAltText}
+				/>
+			)}
 			<div className='pc-rightPanel'>
-				<img src={src} alt={altText} />
+				<img src={logoSrc} alt={logoAltText} />
 				<p align='center'>{description}</p>
 				{techStack.map(obj => {
 					const [type, list] = Object.entries(obj)[0];
 
 					return (
-						<div align='center'>
+						<div className='architecture'>
 							<span>{type}</span>
-							<ul>
+							<ul style={{ textAlign: 'center' }}>
 								{list.map(listElem => (
 									<li>{listElem}</li>
 								))}
