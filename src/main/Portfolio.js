@@ -55,7 +55,7 @@ const portfolioCards = [
 	{
 		id: 2,
 		logoSrc: '/guessing-game-logo.png',
-		logoAltText: 'the-guessing-game',
+		logoAltText: 'the-guessing-game-logo',
 		name: 'The Guessing Game',
 		description:
 			"A detailed look into refactoring an imperative code base to React, React Hooks, and state management via React's Context API",
@@ -68,15 +68,18 @@ const portfolioCards = [
 	},
 	{
 		id: 3,
-		embedId: 'https://i.imgur.com/UFlcEUI.png',
-		logoSrc: '',
-		logoAltText: '',
+		logoSrc: '/breadbakersfriend-logo.png',
+		logoAltText: 'bread-bakers-friend-logo',
 		name: "Bread Baker's Friend",
 		description:
 			'A web app designed for artisan bakery production floors, allowing dynamic recipe recalculation and alterations, export to dynamic spreadsheets, and recipe file storage + upload',
-		techStack: [{ 'Back-end': [] }, { 'Front-end': [] }],
+		techStack: [
+			{ 'Back-end': ['Node.js, Natural'] },
+			{ 'Front-end': ['HTML5, CSS3, JavaScript'] },
+		],
 		siteHref: 'https://breadbakersfriend.com',
 		githubHref: 'https://github.com/shapirodaniel/breadbakersfriend',
+		embedId: 'gGb3Wp1s33w', // https://youtu.be/gGb3Wp1s33w
 	},
 ];
 
