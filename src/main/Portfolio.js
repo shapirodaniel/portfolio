@@ -2,11 +2,37 @@ import React from 'react';
 import YoutubeEmbed from './YoutubeEmbed';
 import './Portfolio.css';
 
-// embedId is YouTube embedId
+/*
+	// portfolio card object
+	{
+		id,
+		logoSrc,
+		logoAltText,
+		description,
+		techStack: [
+			{
+				'Back-end': ['tech1', ...]
+			},
+			{
+				'Front-end': ['tech1', ...]
+			}
+		],
+		siteHref,
+		githubHref
+
+		// for YT vid only!
+		embeddedId: <youtube embed id at end of url>,
+
+		// for other media only!
+		linkedImgUrl: 'something.png',
+		linkedImgUrlAltText: 'alt_text_here',
+	}
+
+*/
+
 const portfolioCards = [
 	{
 		id: 1,
-		embedId: '2UeevSTOnIs',
 		logoSrc: '/note-ary-logo.png',
 		logoAltText: 'note-ary-logo',
 		description:
@@ -24,13 +50,12 @@ const portfolioCards = [
 		],
 		siteHref: 'https://note-ary.herokuapp.com',
 		githubHref: 'https://github.com/shapirodaniel/note-ary',
+		embedId: '2UeevSTOnIs',
 	},
 	{
 		id: 2,
 		logoSrc: '/guessing-game-logo.png',
 		logoAltText: 'the-guessing-game',
-		linkedImgUrl: '/guessing-game-medium-screencap.png',
-		linkedImgUrlAltText: 'the-guessing-game',
 		name: 'The Guessing Game',
 		description:
 			"A detailed look into refactoring an imperative code base to React, React Hooks, and state management via React's Context API",
@@ -38,6 +63,8 @@ const portfolioCards = [
 		siteHref:
 			'https://medium.com/geekculture/rebuilding-an-imperatively-coded-game-from-scratch-in-react-9a082ad002c0',
 		githubHref: 'https://github.com/shapirodaniel/guessing-game-react',
+		linkedImgUrl: '/guessing-game-medium-screencap.png',
+		linkedImgUrlAltText: 'the-guessing-game',
 	},
 	{
 		id: 3,
