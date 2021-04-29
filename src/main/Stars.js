@@ -11,7 +11,8 @@ let starsArray = new Array(400).fill(null).map((_star, idx) => (
 			position: 'absolute',
 			top: Math.ceil(Math.random() * 100) - 5 + '%',
 			left: Math.ceil(Math.random() * 100) - 5 + '%',
-			animation: `twinkle ${Math.ceil(Math.random() * 3) + 3 + 's'} infinite`,
+			color:
+				Math.random() <= 0.02 ? 'red' : Math.random() <= 0.5 ? 'gold' : 'white',
 		}}
 	>
 		.

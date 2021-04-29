@@ -1,5 +1,5 @@
 .skyContainer {
-	height: 1800px;
+	height: 900px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -13,19 +13,4 @@
 	height: 20em;
 	width: auto;
 	object-position: 3em 4.2em;
-}
-
-@keyframes twinkle {
-	0% {
-		color: gold;
-		filter: brightness(0.75);
-	}
-	50% {
-		color: white;
-		filter: brightness(1.75);
-	}
-	100% {
-		color: gold;
-		filter: brightness(0.75);
-	}
 }
