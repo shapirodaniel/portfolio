@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Portfolio.css';
 
 const portfolioCards = [
 	{
 		id: 1,
-		src: 'https://i.imgur.com/tNA7jsP.png',
+		srcArray: ['/note-ary-1.png', '/note-ary-2.png', '/note-ary-3.png'],
 		name: 'Note-ary',
 		description:
 			'A project management suite with Kanban-style boards and realtime communication support (socket.io)',
@@ -12,7 +12,7 @@ const portfolioCards = [
 	},
 	{
 		id: 2,
-		src: 'https://i.imgur.com/DBQZsXM.png',
+		srcArray: 'https://i.imgur.com/DBQZsXM.png',
 		name: 'The Guessing Game',
 		description:
 			"A detailed look into refactoring an imperative code base to React, React Hooks, and state management via React's Context API",
@@ -21,7 +21,7 @@ const portfolioCards = [
 	},
 	{
 		id: 3,
-		src: 'https://i.imgur.com/UFlcEUI.png',
+		srcArray: 'https://i.imgur.com/UFlcEUI.png',
 		name: "Bread Baker's Friend",
 		description:
 			'A web app designed for artisan bakery production floors, allowing dynamic recipe recalculation and alterations, export to dynamic spreadsheets, and recipe file storage + upload',
@@ -29,23 +29,42 @@ const portfolioCards = [
 	},
 ];
 
-const Popover = ({ name, description }) => (
-	<div className='popover'>
-		<span>{name}</span>
-		<p>{description}</p>
-	</div>
-);
-
 const PortfolioCard = ({ card }) => {
-	const { src, name, description, href } = card;
+	const { srcArray, name, description, href } = card;
+
+	const [srcIdx, setSrcIdx] = useState(0);
+
+	const handleClick = direction => {
+		if (direction === 'left') {
+			if (srcIdx === 0) {
+				return;
+			}
+			const newIdx = srcIdx - 1;
+			return setSrcIdx(newIdx);
+		}
+		if (srcIdx === srcArray.length - 1) {
+			return;
+		}
+		const newSrcIdx = srcIdx + 1;
+		setSrcIdx(newSrcIdx);
+	};
 
 	return (
-		<a href={href} target='_blank' rel='noreferrer'>
+		<div>
 			<div className='portfolioCardContainer'>
-				<img src={src} alt='note-ary' />
-				<Popover name={name} description={description} />
+				<img src={srcArray[srcIdx]} alt='note-ary' />
+				<div className='btnsContainer'>
+					<span onClick={() => handleClick('left')}>
+						<i className='material-icons'>keyboard_arrow_left</i>
+					</span>
+					<span onClick={() => handleClick('right')}>
+						<i className='material-icons'>keyboard_arrow_right</i>
+					</span>
+				</div>
 			</div>
-		</a>
+
+			<a href={href} target='_blank' rel='noreferrer'></a>
+		</div>
 	);
 };
 

@@ -1,5 +1,5 @@
 .contactContainer {
-	width: calc(100vw - 30.4em);
+	width: calc(100vw - 26.8em);
 	position: absolute;
 	bottom: 2em;
 	left: 4.6em;
@@ -21,8 +21,8 @@
 }
 
 .copyright {
-	padding-left: 2em;
-	font-size: 1.4em;
+	font-size: 1em;
+	padding-left: 1em;
 }
 
 .icons {
@@ -60,23 +60,15 @@
 
 @media screen and (max-width: 930px) {
 	.contactContainer {
-		width: calc(100vw - 13.4em);
-		margin: 0 auto;
+		width: calc(100vw - 4em);
+		left: 2em;
 	}
 }
 
-@media screen and (max-width: 640px) {
-	.contactContainer {
-		width: calc(100vw - 6em);
-		margin: 0 auto;
-		position: fixed;
-		bottom: 2em;
-		left: 1em;
-	}
-
+@media screen and (max-width: 700px) {
 	.copyright {
 		font-size: 18px;
-		padding-left: 2em;
+		padding-left: 1em;
 	}
 
 	.linkIcon {
@@ -84,7 +76,7 @@
 	}
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 540px) {
 	.copyright {
 		font-size: 14px;
 		padding-left: 1em;

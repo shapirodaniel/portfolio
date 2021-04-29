@@ -62,7 +62,14 @@ const About = () => {
 					<div className='blurb'>
 						<span>What I'm up to currently</span>
 						<p>
-							Learning TypeScript, TypeGraphQL, and TypeORM
+							Building a{' '}
+							<a
+								href='https://github.com/shapirodaniel/stackathon-project'
+								target='_blank'
+								rel='noreferrer'
+							>
+								SaaS solution for bakeries
+							</a>
 							<br />
 							Writing a{' '}
 							<a
@@ -73,7 +80,14 @@ const About = () => {
 								React-like framework
 							</a>
 							<br />
-							Teaching Fellow at Fullstack Academy!
+							Fellow-ing at{' '}
+							<a
+								href='https://www.fullstackacademy.com/software-engineering-immersive'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Fullstack Academy
+							</a>
 						</p>
 					</div>
 				</div>

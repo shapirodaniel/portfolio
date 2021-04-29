@@ -13,6 +13,35 @@
 	height: 440px;
 }
 
+.btnsContainer {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: transparent;
+	z-index: 10;
+}
+
+.btnsContainer span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+	background-color: black;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.btnsContainer span i {
+	color: white;
+	font-size: 2em;
+	text-decoration: none;
+	filter: brightness(100);
+}
+
 .popover {
 	display: none;
 	position: absolute;
