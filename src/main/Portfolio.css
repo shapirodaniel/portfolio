@@ -13,7 +13,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-	height: 100%;
+	height: auto;
 	align-items: flex-start;
 	justify-content: space-between;
 	padding: 1em;
@@ -25,26 +25,35 @@
 	margin: 0 auto;
 }
 
+.pc-rightPanel p,
+.pc-rightPanel ul * {
+	line-height: 1.6em;
+}
+
 .btnsContainer {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1em;
+	width: 100%;
 }
 
 .btnsContainer a {
 	text-decoration: none;
 }
 
-.btnsContainer a span {
+.btnsContainer a div {
+	background-color: var(--dayTextColor);
+	color: white;
+	z-index: 10;
+	min-width: 200px;
 	padding: 1em;
-	background-color: white;
-	color: var(--dayTextColor);
 	transition: background-color 0.2s ease;
+	text-align: center;
 }
 
-.btnsContainer a span:hover {
+.btnsContainer a div:hover {
 	background-color: var(--nightLightAccent);
+	font-weight: 500;
 }
 
 /* Portfolio */

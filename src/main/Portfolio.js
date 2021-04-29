@@ -8,8 +8,9 @@ const portfolioCards = [
 		id: 1,
 		embedId: '2UeevSTOnIs',
 		src: '/note-ary-logo.png',
+		altText: 'note-ary-logo',
 		description:
-			'A project management suite with Kanban-style boards and realtime communication support (socket.io)',
+			'A project management suite that allows users to create and join organizations, invite teammates to collaborate on projects with Kanban-style boards, and stay in touch with realtime updates/communication support',
 		techStack: [
 			{ 'Back-end': ['PostgresSQL + Sequelize', 'Express', 'socket.io'] },
 			{
@@ -27,10 +28,12 @@ const portfolioCards = [
 	{
 		id: 2,
 		embedId: 'https://i.imgur.com/DBQZsXM.png',
+		src: '',
+		altText: '',
 		name: 'The Guessing Game',
 		description:
 			"A detailed look into refactoring an imperative code base to React, React Hooks, and state management via React's Context API",
-		techStack: [{ 'Back-end': [] }, { 'Front-end': [] }],
+		techStack: [{ 'Front-end': ['React + React Context API'] }],
 		siteHref:
 			'https://medium.com/geekculture/rebuilding-an-imperatively-coded-game-from-scratch-in-react-9a082ad002c0',
 		githubHref: 'https://github.com/shapirodaniel/guessing-game-react',
@@ -38,6 +41,8 @@ const portfolioCards = [
 	{
 		id: 3,
 		embedId: 'https://i.imgur.com/UFlcEUI.png',
+		src: '',
+		altText: '',
 		name: "Bread Baker's Friend",
 		description:
 			'A web app designed for artisan bakery production floors, allowing dynamic recipe recalculation and alterations, export to dynamic spreadsheets, and recipe file storage + upload',
@@ -48,19 +53,27 @@ const portfolioCards = [
 ];
 
 const PortfolioCard = ({ card }) => {
-	const { embedId, src, description, techStack, siteHref, githubHref } = card;
+	const {
+		embedId,
+		src,
+		altText,
+		description,
+		techStack,
+		siteHref,
+		githubHref,
+	} = card;
 
 	return (
 		<div className='portfolioCardContainer'>
 			<YoutubeEmbed embedId={embedId} />
 			<div className='pc-rightPanel'>
-				<img src={src} alt={'note-ary-logo'} />
+				<img src={src} alt={altText} />
 				<p align='center'>{description}</p>
 				{techStack.map(obj => {
 					const [type, list] = Object.entries(obj)[0];
 
 					return (
-						<div>
+						<div align='center'>
 							<span>{type}</span>
 							<ul>
 								{list.map(listElem => (
@@ -72,10 +85,10 @@ const PortfolioCard = ({ card }) => {
 				})}
 				<div className='btnsContainer'>
 					<a href={siteHref} target='_blank' rel='noreferrer'>
-						<span>Visit Site</span>
+						<div>Visit Site</div>
 					</a>
 					<a href={githubHref} target='_blank' rel='noreferrer'>
-						<span>GitHub Repo</span>
+						<div>GitHub Repo</div>
 					</a>
 				</div>
 			</div>
