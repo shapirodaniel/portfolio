@@ -16,12 +16,17 @@ const Nav = ({ isModalVisible, setModalVisible }) => {
 
 	// toggleActiveClass toggles activeClass by ref
 	const toggleActiveClass = nodeId => {
-		refArray.forEach(ref => {
-			// special case: recruiter modal
-			if (ref.current.id === 'recruiter') {
-				return ref.current.classList.toggle('activeClass');
-			}
+		// close recruiter modal on any non-recruiter-modal clicks
+		if (nodeId !== 'recruiter') {
+			setModalVisible(false);
+		}
 
+		// special case: recruiter modal
+		if (nodeId === 'recruiter') {
+			return recruiterRef.current.classList.toggle('activeClass');
+		}
+
+		refArray.forEach(ref => {
 			// otherwise, toggle activeClass unless link already active
 			if (ref.current.id === nodeId) {
 				if (ref.current.classList.contains('activeClass')) {
