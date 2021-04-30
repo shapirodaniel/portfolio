@@ -5,7 +5,7 @@ import './Nav.css';
 const scrollIntoView = classSelector =>
 	document.querySelector(classSelector).scrollIntoView({ behavior: 'smooth' });
 
-const Nav = () => {
+const Nav = ({ isModalVisible, setModalVisible }) => {
 	const homeRef = useRef(null);
 	const aboutRef = useRef(null);
 	const recruiterRef = useRef(null);
@@ -17,6 +17,12 @@ const Nav = () => {
 	// toggleActiveClass toggles activeClass by ref
 	const toggleActiveClass = nodeId => {
 		refArray.forEach(ref => {
+			// special case: recruiter modal
+			if (ref.current.id === 'recruiter') {
+				return ref.current.classList.toggle('activeClass');
+			}
+
+			// otherwise, toggle activeClass unless link already active
 			if (ref.current.id === nodeId) {
 				if (ref.current.classList.contains('activeClass')) {
 					return;
@@ -57,7 +63,7 @@ const Nav = () => {
 				id='recruiter'
 				ref={recruiterRef}
 				onClick={() => {
-					scrollIntoView('.recruiterContainer');
+					setModalVisible(!isModalVisible);
 					toggleActiveClass('recruiter');
 				}}
 			>

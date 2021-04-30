@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.css';
-import { Nav, About, Stars, Portfolio, Contact } from './main/';
+import {
+	Modal,
+	Nav,
+	About,
+	Recruiter,
+	Stars,
+	Portfolio,
+	Contact,
+} from './main/';
 
 const Main = () => {
+	// useState manages recruiter modal visibility
+	const [isModalVisible, setModalVisible] = useState(false);
+
 	return (
 		<main>
-			<Nav />
+			{isModalVisible && (
+				<Modal>
+					<Recruiter />
+				</Modal>
+			)}
+			<Nav isModalVisible={isModalVisible} setModalVisible={setModalVisible} />
 			<About />
 			<Portfolio />
 			<Stars>
