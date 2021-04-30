@@ -42,15 +42,15 @@ const PortfolioCard = ({ card }) => {
 			<div className='pc-rightPanel'>
 				<img src={logoSrc} alt={logoAltText} />
 				<p align='center'>{description}</p>
-				{techStack.map(obj => {
+				{techStack.map((obj, objIdx) => {
 					const [type, list] = Object.entries(obj)[0];
 
 					return (
-						<div className='architecture'>
+						<div key={objIdx} className='architecture'>
 							<span>{type}</span>
 							<ul style={{ textAlign: 'center' }}>
-								{list.map(listElem => (
-									<li>{listElem}</li>
+								{list.map((listElem, idx) => (
+									<li key={idx}>{listElem}</li>
 								))}
 							</ul>
 						</div>
