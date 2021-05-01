@@ -24,6 +24,15 @@ const Stars = ({ children }) => {
 		<section className='skyContainer'>
 			{children}
 			{starsArray}
+			<div className='rocketContainer'>
+				<img
+					className='rocketShip'
+					src={'/rocket-ship.svg'}
+					alt='rocket-ship'
+				/>
+				<img className='speed' src={'/speed.svg'} alt='speed' />
+				<img className='jet' src={'/jet.svg'} alt='jet' />
+			</div>
 			<img className='pinkMoon' src='/pink-moon.png' alt='pink-moon' />
 		</section>
 	);

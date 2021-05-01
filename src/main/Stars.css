@@ -13,3 +13,34 @@
 	width: auto;
 	object-position: 3em 4.2em;
 }
+
+.rocketContainer {
+	position: relative;
+	left: -40%;
+	bottom: 14em;
+	transform: rotate(50deg);
+}
+
+.rocketContainer * {
+	object-fit: contain;
+}
+
+.rocketShip {
+	position: absolute;
+	height: 100px;
+	width: auto;
+}
+
+.speed {
+	position: absolute;
+	display: none;
+	height: 60px;
+	width: auto;
+}
+
+.jet {
+	position: absolute;
+	display: none;
+	height: 30px;
+	width: auto;
+}
