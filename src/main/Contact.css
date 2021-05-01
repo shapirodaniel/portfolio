@@ -19,17 +19,23 @@
 }
 
 .icons a {
+	margin: 1em 2em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: auto;
-	width: 120px;
+	height: 18em;
+	width: 16em;
 	padding: 0.5em;
 	background-color: var(--nightLightAccent);
 	box-shadow: 5px 5px 0 var(--nightDarkAccent);
 }
 
 .linkIcon {
-	height: 80px;
+	max-height: 10em;
 	width: auto;
+	transition: filter 0.2s ease;
+}
+
+.linkIcon:hover {
+	filter: invert();
 }
