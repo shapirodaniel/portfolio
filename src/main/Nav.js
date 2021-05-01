@@ -123,6 +123,9 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 					alt={'easter-egg-icon'}
 				/>
 			</span>
+			<span className='ee-conditionalText'>
+				<i className='material-icons'>west</i> Easter Egg! :)
+			</span>
 		</nav>
 	);
 };

@@ -10,18 +10,22 @@ nav {
 
 nav span {
 	font-size: 18px;
-	cursor: pointer;
 	border-bottom: 1px solid transparent;
 	transition: border-bottom 0.2s ease;
 	margin: 1em;
 	padding-bottom: 0.3em;
 }
 
-nav span:hover {
+nav span:hover:not(.ee-conditionalText) {
+	cursor: pointer;
 	border-bottom: 1px solid white;
 }
 
-nav span:hover i {
+nav span:hover i:not(.ee-conditionalText i) {
+	color: gold;
+}
+
+nav span.activeClass i {
 	color: gold;
 }
 
@@ -33,4 +37,31 @@ nav span.activeClass {
 	filter: invert();
 	height: 2em;
 	transform: translateY(5px);
+	padding-top: 0.3em;
+}
+
+#easterEgg:hover > .easterEggIcon {
+	filter: invert(79%) sepia(81%) saturate(1534%) hue-rotate(357deg)
+		brightness(99%) contrast(107%);
+}
+
+#easterEgg:hover + .ee-conditionalText {
+	display: inline-flex;
+}
+
+.ee-conditionalText {
+	display: none;
+	align-items: baseline;
+	margin: 0;
+	padding: 0;
+}
+
+.ee-conditionalText i {
+	transform: translateY(5px);
+	margin-right: 0.3em;
+}
+
+#easterEgg.activeClass img {
+	filter: invert(79%) sepia(81%) saturate(1534%) hue-rotate(357deg)
+		brightness(99%) contrast(107%);
 }
