@@ -18,7 +18,6 @@ const Main = () => {
 	return (
 		<main>
 			<Nav
-				isModalVisible={isModalVisible}
 				setModalVisible={setModalVisible}
 				setModalComponent={setModalComponent}
 			/>

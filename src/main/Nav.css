@@ -35,9 +35,8 @@ nav span.activeClass {
 
 .easterEggIcon {
 	filter: invert();
-	height: 2em;
+	height: 1.4em;
 	transform: translateY(5px);
-	padding-top: 0.3em;
 }
 
 #easterEgg:hover > .easterEggIcon {
@@ -47,6 +46,7 @@ nav span.activeClass {
 
 #easterEgg:hover + .ee-conditionalText {
 	display: inline-flex;
+	margin-bottom: -0.1em;
 }
 
 .ee-conditionalText {

@@ -5,7 +5,7 @@ import './Nav.css';
 const scrollIntoView = classSelector =>
 	document.querySelector(classSelector).scrollIntoView({ behavior: 'smooth' });
 
-const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
+const Nav = ({ setModalVisible, setModalComponent }) => {
 	const homeRef = useRef(null);
 	const aboutRef = useRef(null);
 	const recruiterRef = useRef(null);
