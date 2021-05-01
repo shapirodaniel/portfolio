@@ -1,0 +1,35 @@
+.contactContainer {
+	height: 100vh;
+	padding-top: 4em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	z-index: 1;
+}
+
+.contactContainer h3 {
+	color: white;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.icons a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	width: 120px;
+	padding: 0.5em;
+	background-color: var(--nightLightAccent);
+	box-shadow: 5px 5px 0 var(--nightDarkAccent);
+}
+
+.linkIcon {
+	height: 80px;
+	width: auto;
+}

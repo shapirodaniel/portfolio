@@ -7,7 +7,7 @@
 	border-radius: 40px;
 	background-color: #f9c2da;
 	color: var(--nightDarkAccent);
-	box-shadow: 3px 5px 0px var(--nightBoxShadowSolid);
+	box-shadow: 3px 5px 0px var(--nightDarkAccent);
 
 	display: flex;
 	align-items: center;
@@ -23,33 +23,6 @@
 .copyright {
 	font-size: 1em;
 	padding-left: 1em;
-}
-
-.icons {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-.icons a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	width: 120px;
-	padding: 0.5em;
-	border-radius: 5px;
-	background-color: inherit;
-	transition: background-color 0.1s ease-in-out;
-}
-
-.icons a:hover {
-	background-color: var(--nightLightAccent);
-}
-
-.linkIcon {
-	height: 40px;
-	width: auto;
 }
 
 @media screen and (max-width: 1040px) {
@@ -69,10 +42,6 @@
 	.copyright {
 		font-size: 18px;
 		padding-left: 1em;
-	}
-
-	.linkIcon {
-		height: 32px;
 	}
 }
 
