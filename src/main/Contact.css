@@ -23,23 +23,28 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 18em;
-	width: 16em;
+	height: 14em;
+	width: 14em;
 	padding: 0.5em;
 	border-radius: 10px;
 	background-color: var(--nightLightAccent);
 	box-shadow: 5px 5px 0 var(--nightDarkAccent);
+	transition: background-color 0.1s ease;
 }
 
 .linkIcon {
-	max-height: 10em;
+	max-height: 8em;
 	width: auto;
 	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
 		brightness(83%) contrast(90%);
 	transition: filter 0.1s ease;
 }
 
-.linkIcon:hover {
+.icons a:hover {
+	background-color: var(--nightLightAccentHover);
+}
+
+.icons a:hover > .linkIcon {
 	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
-		brightness(20000%) contrast(90%);
+		brightness(50%) contrast(90%);
 }
