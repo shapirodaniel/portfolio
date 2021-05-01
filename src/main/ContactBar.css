@@ -5,7 +5,7 @@
 	left: 4.6em;
 	height: 4em;
 	border-radius: 40px;
-	background-color: #f9c2da;
+	background-color: var(--nightLightAccent);
 	color: var(--nightDarkAccent);
 	box-shadow: 3px 5px 0px var(--nightDarkAccent);
 
