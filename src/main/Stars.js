@@ -31,7 +31,8 @@ const Stars = ({ children }) => {
 					alt='rocket-ship'
 				/>
 				<img className='speed' src={'/speed.svg'} alt='speed' />
-				<img className='jet' src={'/jet.svg'} alt='jet' />
+				<img className='leftJet' src={'/jet.svg'} alt='jet' />
+				<img className='rightJet' src={'/jet.svg'} alt='jet' />
 			</div>
 			<img className='pinkMoon' src='/pink-moon.png' alt='pink-moon' />
 		</section>

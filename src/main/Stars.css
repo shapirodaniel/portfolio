@@ -32,15 +32,30 @@
 }
 
 .speed {
+	/* display: none; */
 	position: absolute;
-	display: none;
+	bottom: -10.4em;
+	left: 0.6em;
 	height: 60px;
 	width: auto;
 }
 
-.jet {
+.leftJet {
+	/* display: none; */
 	position: absolute;
-	display: none;
-	height: 30px;
+	bottom: -4.6em;
+	left: -3.4em;
+	height: 50px;
 	width: auto;
+	transform: rotate(-20deg);
+}
+
+.rightJet {
+	/* display: none; */
+	position: absolute;
+	bottom: -5.6em;
+	left: 5.1em;
+	height: 50px;
+	width: auto;
+	transform: rotate(-240deg);
 }
