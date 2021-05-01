@@ -7,11 +7,10 @@ import {
 	Recruiter,
 	Stars,
 	Portfolio,
-	ContactBar,
+	Contact,
 } from './main/';
 
 const Main = () => {
-	// useState manages recruiter modal visibility
 	const [isModalVisible, setModalVisible] = useState(false);
 
 	return (
@@ -25,7 +24,7 @@ const Main = () => {
 			<About />
 			<Stars>
 				<Portfolio />
-				<ContactBar />
+				<Contact />
 			</Stars>
 		</main>
 	);
