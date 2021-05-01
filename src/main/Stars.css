@@ -14,14 +14,14 @@
 	object-position: 3em 4.2em;
 }
 
-.rocketContainer {
+.rocketContainerAcross {
 	position: relative;
 	left: -40%;
 	bottom: 14em;
 	transform: rotate(50deg);
 }
 
-.rocketContainer * {
+.rocketContainerAcross * {
 	object-fit: contain;
 }
 

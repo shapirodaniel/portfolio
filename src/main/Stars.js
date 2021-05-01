@@ -24,7 +24,23 @@ const Stars = ({ children }) => {
 		<section className='skyContainer'>
 			{children}
 			{starsArray}
-			<div className='rocketContainer'>
+
+			{/* trace path and leave a dotted trail? */}
+
+			{/* forward animation on intersection with viewport */}
+			<div className='rocketContainerAcross'>
+				<img
+					className='rocketShip'
+					src={'/rocket-ship.svg'}
+					alt='rocket-ship'
+				/>
+				<img className='speed' src={'/speed.svg'} alt='speed' />
+				<img className='leftJet' src={'/jet.svg'} alt='jet' />
+				<img className='rightJet' src={'/jet.svg'} alt='jet' />
+			</div>
+			{/* infinite animation "orbiting" .pinkMoon img,
+			scaled down on approach to give depth illusion */}
+			<div className='rocketContainerOrbit'>
 				<img
 					className='rocketShip'
 					src={'/rocket-ship.svg'}
