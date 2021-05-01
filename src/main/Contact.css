@@ -14,8 +14,9 @@
 
 .icons {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	justify-content: flex-end;
+	height: calc(100% - 26em);
 }
 
 .icons a {
