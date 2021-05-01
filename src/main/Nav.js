@@ -5,25 +5,38 @@ import './Nav.css';
 const scrollIntoView = classSelector =>
 	document.querySelector(classSelector).scrollIntoView({ behavior: 'smooth' });
 
-const Nav = ({ isModalVisible, setModalVisible }) => {
+const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 	const homeRef = useRef(null);
 	const aboutRef = useRef(null);
 	const recruiterRef = useRef(null);
 	const portfolioRef = useRef(null);
 	const contactRef = useRef(null);
+	const easterEggRef = useRef(null);
 
-	const refArray = [homeRef, aboutRef, recruiterRef, portfolioRef, contactRef];
+	const refArray = [
+		homeRef,
+		aboutRef,
+		recruiterRef,
+		portfolioRef,
+		contactRef,
+		easterEggRef,
+	];
 
 	// toggleActiveClass toggles activeClass by ref
 	const toggleActiveClass = nodeId => {
 		// close recruiter modal on any non-recruiter-modal clicks
-		if (nodeId !== 'recruiter') {
+		if (nodeId !== 'recruiter' && nodeId !== 'easterEgg') {
 			setModalVisible(false);
 		}
 
 		// special case: recruiter modal
 		if (nodeId === 'recruiter') {
+			easterEggRef.current.classList.remove('activeClass');
 			return recruiterRef.current.classList.toggle('activeClass');
+		}
+		if (nodeId === 'easterEgg') {
+			recruiterRef.current.classList.remove('activeClass');
+			return easterEggRef.current.classList.toggle('activeClass');
 		}
 
 		refArray.forEach(ref => {
@@ -68,7 +81,8 @@ const Nav = ({ isModalVisible, setModalVisible }) => {
 				id='recruiter'
 				ref={recruiterRef}
 				onClick={() => {
-					setModalVisible(!isModalVisible);
+					setModalComponent('Recruiter');
+					setModalVisible(true);
 					toggleActiveClass('recruiter');
 				}}
 			>
@@ -93,6 +107,21 @@ const Nav = ({ isModalVisible, setModalVisible }) => {
 				}}
 			>
 				Contact
+			</span>
+			<span
+				id='easterEgg'
+				ref={easterEggRef}
+				onClick={() => {
+					setModalComponent('EasterEgg');
+					setModalVisible(true);
+					toggleActiveClass('easterEgg');
+				}}
+			>
+				<img
+					className='easterEggIcon'
+					src={'/easter-egg.svg'}
+					alt={'easter-egg-icon'}
+				/>
 			</span>
 		</nav>
 	);

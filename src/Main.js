@@ -8,17 +8,23 @@ import {
 	Stars,
 	Portfolio,
 	Contact,
+	EasterEgg,
 } from './main/';
 
 const Main = () => {
 	const [isModalVisible, setModalVisible] = useState(false);
+	const [modalComponent, setModalComponent] = useState('Recruiter');
 
 	return (
 		<main>
-			<Nav isModalVisible={isModalVisible} setModalVisible={setModalVisible} />
+			<Nav
+				isModalVisible={isModalVisible}
+				setModalVisible={setModalVisible}
+				setModalComponent={setModalComponent}
+			/>
 			{isModalVisible && (
-				<Modal>
-					<Recruiter />
+				<Modal closeModal={() => setModalVisible(false)}>
+					{modalComponent === 'Recruiter' ? <Recruiter /> : <EasterEgg />}
 				</Modal>
 			)}
 			<About />
