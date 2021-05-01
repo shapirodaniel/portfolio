@@ -7,7 +7,7 @@ import {
 	Recruiter,
 	Stars,
 	Portfolio,
-	Contact,
+	ContactBar,
 } from './main/';
 
 const Main = () => {
@@ -23,9 +23,9 @@ const Main = () => {
 			)}
 			<Nav isModalVisible={isModalVisible} setModalVisible={setModalVisible} />
 			<About />
-			<Portfolio />
 			<Stars>
-				<Contact />
+				<Portfolio />
+				<ContactBar />
 			</Stars>
 		</main>
 	);

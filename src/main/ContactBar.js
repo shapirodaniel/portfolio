@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.css';
+import './ContactBar.css';
 
 const links = [
 	{
@@ -22,7 +22,7 @@ const links = [
 	},
 ];
 
-const Contact = () => {
+const ContactBar = () => {
 	return (
 		<section className='contactContainer'>
 			<div className='copyright'>&#169; 2021 Daniel Shapiro</div>
@@ -37,4 +37,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default ContactBar;
