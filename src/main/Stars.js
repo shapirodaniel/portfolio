@@ -9,8 +9,8 @@ let starsArray = new Array(400).fill(null).map((_star, idx) => (
 			fontSize: Math.ceil(Math.random() * 20) + 'px',
 			opacity: Math.random().toFixed(1),
 			position: 'absolute',
-			top: Math.ceil(Math.random() * 100) - 5 + '%',
-			left: Math.ceil(Math.random() * 100) - 5 + '%',
+			bottom: Math.ceil(Math.random() * 80) + '%',
+			left: Math.ceil(Math.random() * 100) - 1 + '%',
 			color:
 				Math.random() <= 0.02 ? 'red' : Math.random() <= 0.5 ? 'gold' : 'white',
 		}}

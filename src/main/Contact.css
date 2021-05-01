@@ -26,6 +26,7 @@
 	height: 18em;
 	width: 16em;
 	padding: 0.5em;
+	border-radius: 10px;
 	background-color: var(--nightLightAccent);
 	box-shadow: 5px 5px 0 var(--nightDarkAccent);
 }
@@ -33,9 +34,12 @@
 .linkIcon {
 	max-height: 10em;
 	width: auto;
-	transition: filter 0.2s ease;
+	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
+		brightness(83%) contrast(90%);
+	transition: filter 0.1s ease;
 }
 
 .linkIcon:hover {
-	filter: invert();
+	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
+		brightness(20000%) contrast(90%);
 }
