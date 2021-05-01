@@ -15,12 +15,12 @@ const Main = () => {
 
 	return (
 		<main>
+			<Nav isModalVisible={isModalVisible} setModalVisible={setModalVisible} />
 			{isModalVisible && (
 				<Modal>
 					<Recruiter />
 				</Modal>
 			)}
-			<Nav isModalVisible={isModalVisible} setModalVisible={setModalVisible} />
 			<About />
 			<Stars>
 				<Portfolio />
