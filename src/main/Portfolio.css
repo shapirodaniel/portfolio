@@ -2,7 +2,7 @@
 
 .portfolioCardContainer {
 	display: flex;
-	box-shadow: 10px 10px 0 var(--nightLightAccent);
+	box-shadow: 10px 10px 0 var(--nightMediumAccent);
 	width: 90%;
 	max-width: 1000px;
 	margin: 2em auto;
@@ -75,7 +75,7 @@
 }
 
 .btnsContainer a div:hover {
-	background-color: var(--nightLightAccent);
+	background-color: var(--nightMediumAccent);
 	font-weight: 500;
 }
 

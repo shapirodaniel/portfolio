@@ -3,8 +3,9 @@
 :root {
 	--dayTextColor: rgba(2, 0, 36, 1);
 	--nightDarkAccent: #5b1a34;
-	--nightLightAccent: #d898b2;
-	--nightLightAccentHover: #ddafc1;
+	--nightLightAccent: #f3d6e2;
+	--nightLightAccentHover: #f3ccdc;
+	--nightMediumAccent: #d898b2;
 	--nightBoxShadowSolid: purple;
 }
 

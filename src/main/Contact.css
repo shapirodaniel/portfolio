@@ -52,5 +52,5 @@
 
 .icons a:hover > .linkIcon {
 	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
-		brightness(50%) contrast(90%);
+		brightness(83%) contrast(90%);
 }
