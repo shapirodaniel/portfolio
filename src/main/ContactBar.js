@@ -24,7 +24,7 @@ const links = [
 
 const ContactBar = () => {
 	return (
-		<section className='contactContainer'>
+		<div className='contactBarContainer'>
 			<div className='copyright'>&#169; 2021 Daniel Shapiro</div>
 			<div className='icons'>
 				{links.map(({ id, src, href, alt }) => (
@@ -33,7 +33,7 @@ const ContactBar = () => {
 					</a>
 				))}
 			</div>
-		</section>
+		</div>
 	);
 };
 

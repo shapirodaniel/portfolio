@@ -1,4 +1,4 @@
-.contactContainer {
+.contactBarContainer {
 	width: calc(100vw - 26.8em);
 	position: absolute;
 	bottom: 2em;
@@ -16,7 +16,7 @@
 	z-index: 1;
 }
 
-.contactContainer div {
+.contactBarContainer div {
 	width: 50%;
 }
 
