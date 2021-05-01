@@ -24,11 +24,6 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 
 	// toggleActiveClass toggles activeClass by ref
 	const toggleActiveClass = nodeId => {
-		// close recruiter modal on any non-recruiter-modal clicks
-		if (nodeId !== 'recruiter' && nodeId !== 'easterEgg') {
-			setModalVisible(false);
-		}
-
 		// special case: recruiter modal
 		if (nodeId === 'recruiter') {
 			easterEggRef.current.classList.remove('activeClass');
@@ -62,6 +57,7 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 				ref={homeRef}
 				onClick={() => {
 					scrollIntoView('.welcomeContainer');
+					setModalVisible(false);
 					toggleActiveClass('welcome');
 				}}
 			>
@@ -72,6 +68,7 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 				ref={aboutRef}
 				onClick={() => {
 					scrollIntoView('.aboutContainer');
+					setModalVisible(false);
 					toggleActiveClass('about');
 				}}
 			>
@@ -82,7 +79,9 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 				ref={recruiterRef}
 				onClick={() => {
 					setModalComponent('Recruiter');
-					setModalVisible(true);
+					recruiterRef.current.classList.contains('activeClass')
+						? setModalVisible(false)
+						: setModalVisible(true);
 					toggleActiveClass('recruiter');
 				}}
 			>
@@ -93,6 +92,7 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 				ref={portfolioRef}
 				onClick={() => {
 					scrollIntoView('.portfolioContainer');
+					setModalVisible(false);
 					toggleActiveClass('portfolio');
 				}}
 			>
@@ -103,6 +103,7 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 				ref={contactRef}
 				onClick={() => {
 					scrollIntoView('.contactContainer');
+					setModalVisible(false);
 					toggleActiveClass('contact');
 				}}
 			>
@@ -113,7 +114,9 @@ const Nav = ({ isModalVisible, setModalVisible, setModalComponent }) => {
 				ref={easterEggRef}
 				onClick={() => {
 					setModalComponent('EasterEgg');
-					setModalVisible(true);
+					easterEggRef.current.classList.contains('activeClass')
+						? setModalVisible(false)
+						: setModalVisible(true);
 					toggleActiveClass('easterEgg');
 				}}
 			>
