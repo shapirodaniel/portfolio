@@ -1,11 +1,11 @@
 .speed {
-	display: none;
 	position: absolute;
-	bottom: -10.4em;
-	left: 0.6em;
+	bottom: -9.4em;
+	left: 0;
 	height: 60px;
 	width: auto;
-	animation: speed-visibility 10s steps(2) forwards;
+	/* animation: speed-visibility 10s steps(2) forwards;
+	animation-delay: 1s; */
 }
 
 @keyframes speed-visibility {

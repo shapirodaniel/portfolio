@@ -3,12 +3,12 @@
 .rocketContainerAcross {
 	position: relative;
 
-	/* actual values should be*/
-
+	/* init values for rocketShip offscreeen */
 	bottom: -8em;
-	left: -52%;
+	left: -32%;
 	transform: rotate(50deg);
-	animation: rocketpath 10s steps(2) forwards;
+	/* animation: rocketpath 10s steps(2) forwards;
+	animation-delay: 1s; */
 }
 
 .rocketContainerAcross * {
@@ -17,7 +17,7 @@
 
 .rocketShip {
 	position: absolute;
-	height: 100px;
+	height: 80px;
 	width: auto;
 }
 

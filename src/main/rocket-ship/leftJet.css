@@ -1,12 +1,12 @@
 .leftJet {
-	display: none;
 	position: absolute;
-	bottom: -4.6em;
+	bottom: -3.6em;
 	left: -3.4em;
 	height: 50px;
 	width: auto;
 	transform: rotate(-20deg);
-	animation: leftJet-visibility 10s steps(2) forwards;
+	/* animation: leftJet-visibility 10s steps(2) forwards;
+	animation-delay: 1s; */
 }
 
 @keyframes leftJet-visibility {

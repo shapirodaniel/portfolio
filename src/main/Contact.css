@@ -1,5 +1,4 @@
 .contactContainer {
-	height: 100vh;
 	padding-top: 4em;
 	display: flex;
 	flex-direction: column;
@@ -17,6 +16,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	height: calc(100% - 26em);
+	margin-bottom: -4em;
 }
 
 .icons a {

@@ -1,12 +1,12 @@
 .rightJet {
-	display: none;
 	position: absolute;
-	bottom: -5.6em;
-	left: 5.1em;
+	bottom: -4.6em;
+	left: 4.1em;
 	height: 50px;
 	width: auto;
 	transform: rotate(-240deg);
-	animation: rightJet-visibility 10s steps(2) forwards;
+	/* animation: rightJet-visibility 10s steps(2) forwards;
+	animation-delay: 1s; */
 }
 
 @keyframes rightJet-visibility {
