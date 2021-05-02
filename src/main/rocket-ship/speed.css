@@ -5,4 +5,158 @@
 	left: 0.6em;
 	height: 60px;
 	width: auto;
+	animation: speed-visibility 10s steps(2) forwards;
+}
+
+@keyframes speed-visibility {
+	0% {
+		bottom: -8em;
+		left: -52%;
+	}
+	3% {
+		bottom: -8em;
+		left: -44%;
+		transform: rotate(60deg);
+	}
+	6% {
+		bottom: -7em;
+		left: -40.25%;
+		transform: rotate(70deg);
+	}
+	9% {
+		bottom: -7em;
+		left: -36.5%;
+		transform: rotate(90deg);
+	}
+	12% {
+		bottom: -11em;
+		left: -32.75%;
+		transform: rotate(120deg);
+	}
+	15% {
+		/* loop starts here */
+		bottom: -10em;
+		left: -29%;
+		transform: rotate(80deg);
+	}
+	18% {
+		bottom: -6em;
+		left: -28%;
+		transform: rotate(10deg);
+	}
+	21% {
+		bottom: -2em;
+		left: -34%;
+		transform: rotate(-60deg);
+	}
+	24% {
+		bottom: -6em;
+		left: -36%;
+		transform: rotate(-120deg);
+	}
+	28% {
+		bottom: -11em;
+		left: -34%;
+		transform: rotate(-220deg);
+	}
+	32% {
+		bottom: -11em;
+		left: -30%;
+		transform: rotate(-280deg);
+	}
+	35% {
+		bottom: -8em;
+		left: -25%;
+		transform: rotate(-300deg);
+	}
+	38% {
+		bottom: -6em;
+		left: -20%;
+		transform: rotate(-320deg);
+	}
+	41% {
+		bottom: -3em;
+		left: -12%;
+		transform: rotate(-310deg);
+	}
+	44% {
+		bottom: -3em;
+		left: -6%;
+		transform: rotate(-280deg);
+	}
+	48% {
+		bottom: -6em;
+		left: -1%;
+		transform: rotate(-240deg);
+	}
+	52% {
+		bottom: -12em;
+		left: 3%;
+		transform: rotate(-230deg);
+	}
+	55% {
+		bottom: -12em;
+		left: 6%;
+		transform: rotate(-250deg);
+	}
+	58% {
+		bottom: -13em;
+		left: 9%;
+		transform: rotate(-260deg);
+	}
+	61% {
+		bottom: -11em;
+		left: 12%;
+		transform: rotate(-290deg);
+	}
+	64% {
+		bottom: -8em;
+		left: 15%;
+		transform: rotate(-320deg);
+	}
+	67% {
+		bottom: -6em;
+		left: 18%;
+		transform: rotate(-310deg);
+	}
+	70% {
+		bottom: -6em;
+		left: 18%;
+		transform: rotateX(40deg) rotateY(10deg) rotateZ(45deg);
+	}
+	73% {
+		bottom: -6em;
+		left: 22%;
+		transform: rotateX(60deg) rotateY(20deg) rotateZ(50deg);
+	}
+	76% {
+		bottom: -8em;
+		left: 28%;
+		transform: scaleX(2.5) rotateX(70deg) rotateY(40deg) rotateZ(50deg);
+	}
+	79% {
+		bottom: -12em;
+		left: 30%;
+		transform: scaleX(0.75) rotateX(70deg) rotateY(40deg) rotateZ(60deg);
+	}
+	82% {
+		bottom: -12em;
+		left: 32%;
+		transform: scale(0.5) rotateX(70deg) rotateY(40deg) rotateZ(60deg);
+	}
+	86% {
+		bottom: -12em;
+		left: 34%;
+		transform: scale(0.5) rotateX(50deg) rotateY(30deg) rotateZ(60deg);
+	}
+	90% {
+		bottom: -12em;
+		left: 36%;
+		transform: scale(0.65) rotateX(30deg) rotateY(20deg) rotateZ(50deg);
+	}
+	100% {
+		bottom: -12em;
+		left: 40%;
+		transform: scale(0.65) rotateX(30deg) rotateY(10deg) rotateZ(70deg);
+	}
 }
