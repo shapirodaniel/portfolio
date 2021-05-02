@@ -188,6 +188,13 @@
 	animation: hide-orbit 16s infinite;
 }
 
+.rocketShipTrail {
+	position: absolute;
+	left: -12%;
+	bottom: 14%;
+	transform: rotate(-12deg);
+}
+
 .rocketContainerOrbit > div {
 	height: 20em;
 	width: 20.6em;
@@ -197,11 +204,11 @@
 	right: -3.4em;
 	transform: rotate(270deg);
 	animation: orbit 8s steps(35) infinite;
-	animation-delay: 8s; /* however long the first animation takes */
+	/* animation-delay: 8s; */ /* however long the first animation takes */
 }
 
 .rocketShipOrbit {
-	height: 60px;
+	height: 50px;
 	transform: rotate(40deg);
 }
 

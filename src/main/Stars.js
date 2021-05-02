@@ -47,6 +47,11 @@ const Stars = ({ children }) => {
 						src={'/rocket-ship.svg'}
 						alt='rocket-ship'
 					/>
+					<img
+						className='rocketShipTrail'
+						src={'/rocket-ship-trail.svg'}
+						alt='rocket-ship-trail'
+					/>
 				</div>
 			</div>
 			<img className='pinkMoon' src='/pink-moon.png' alt='pink-moon' />
