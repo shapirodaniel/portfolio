@@ -1,5 +1,10 @@
 import React from 'react';
 import './Stars.css';
+import './rocket-ship/rocketShip.css';
+import './rocket-ship/speed.css';
+import './rocket-ship/leftJet.css';
+import './rocket-ship/rightJet.css';
+import './rocket-ship/rocketShipOrbit.css';
 
 let starsArray = new Array(400).fill(null).map((_star, idx) => (
 	<span

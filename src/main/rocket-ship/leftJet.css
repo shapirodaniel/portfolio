@@ -1,0 +1,9 @@
+.leftJet {
+	display: none;
+	position: absolute;
+	bottom: -4.6em;
+	left: -3.4em;
+	height: 50px;
+	width: auto;
+	transform: rotate(-20deg);
+}

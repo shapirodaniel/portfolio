@@ -1,0 +1,9 @@
+.rightJet {
+	display: none;
+	position: absolute;
+	bottom: -5.6em;
+	left: 5.1em;
+	height: 50px;
+	width: auto;
+	transform: rotate(-240deg);
+}
