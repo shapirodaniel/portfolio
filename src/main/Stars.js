@@ -41,14 +41,13 @@ const Stars = ({ children }) => {
 			{/* infinite animation "orbiting" .pinkMoon img,
 			scaled down on approach to give depth illusion */}
 			<div className='rocketContainerOrbit'>
-				<img
-					className='rocketShip'
-					src={'/rocket-ship.svg'}
-					alt='rocket-ship'
-				/>
-				<img className='speed' src={'/speed.svg'} alt='speed' />
-				<img className='leftJet' src={'/jet.svg'} alt='jet' />
-				<img className='rightJet' src={'/jet.svg'} alt='jet' />
+				<div>
+					<img
+						className='rocketShipOrbit'
+						src={'/rocket-ship.svg'}
+						alt='rocket-ship'
+					/>
+				</div>
 			</div>
 			<img className='pinkMoon' src='/pink-moon.png' alt='pink-moon' />
 		</section>
