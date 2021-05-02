@@ -185,7 +185,7 @@
 	right: -36%;
 	height: 24em;
 	width: 24em;
-	/* animation: hide-orbit 16s infinite; */
+	animation: hide-orbit 16s infinite;
 }
 
 .rocketContainerOrbit > div {
@@ -197,7 +197,7 @@
 	right: -3.4em;
 	transform: rotate(270deg);
 	animation: orbit 8s steps(35) infinite;
-	animation-delay: 0s;
+	animation-delay: 8s; /* however long the first animation takes */
 }
 
 .rocketShipOrbit {
