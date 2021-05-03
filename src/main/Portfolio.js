@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useEffect } from 'react';
 import YoutubeEmbed from './YoutubeEmbed';
 import { portfolioContent } from './portfolioContent';
 import './Portfolio.css';
@@ -78,10 +78,11 @@ const Portfolio = () => {
 
 	const isOnScreen = useOnScreen(ref);
 
-	if (isOnScreen) {
-		console.log('hi im onscreen');
-		setActiveNodeId('portfolio');
-	}
+	useEffect(() => {
+		if (isOnScreen) {
+			setActiveNodeId('portfolio');
+		}
+	}, [isOnScreen, setActiveNodeId]);
 
 	return (
 		<section ref={ref} className='portfolioContainer'>

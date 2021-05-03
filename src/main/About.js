@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useEffect } from 'react';
 import './About.css';
 import TechList from './TechList';
 import { IntersectionContext } from '../context/intersectionContext';
@@ -52,10 +52,11 @@ const About = () => {
 
 	const isOnScreen = useOnScreen(ref);
 
-	if (isOnScreen) {
-		console.log('hi im onscreen');
-		setActiveNodeId('about');
-	}
+	useEffect(() => {
+		if (isOnScreen) {
+			setActiveNodeId('about');
+		}
+	}, [isOnScreen, setActiveNodeId]);
 
 	return (
 		<section ref={ref} className='aboutContainer'>

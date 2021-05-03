@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
 
 export const useOnScreen = ref => {
-	const [onScreen, setOnScreen] = useState(false);
+	const [isOnScreen, setOnScreen] = useState(false);
 
-	const observer = new IntersectionObserver(
-		([entry]) => setOnScreen(entry.isIntersecting),
-		{
-			threshold: [0, 0.5, 1.0],
-		}
+	const observer = new IntersectionObserver(([entry]) =>
+		setOnScreen(entry.isIntersecting)
 	);
 
 	useEffect(() => {
@@ -17,5 +14,5 @@ export const useOnScreen = ref => {
 		};
 	});
 
-	return onScreen;
+	return isOnScreen;
 };
