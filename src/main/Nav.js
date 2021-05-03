@@ -1,123 +1,58 @@
-import React, { useRef } from 'react';
+import React, { useContext } from 'react';
+import { IntersectionContext } from '../context/intersectionContext';
 import './Nav.css';
 
-// vertical scroll takes a classSelector .sectionName
-const scrollIntoView = classSelector =>
-	document.querySelector(classSelector).scrollIntoView({ behavior: 'smooth' });
+const staticNavLinks = [
+	{ nodeId: 'welcome', selector: '.welcomeContainer' },
+	{ nodeId: 'about', selector: '.aboutContainer' },
+	{ nodeId: 'portfolio', selector: '.portfolioContainer' },
+	{ nodeId: 'contact', selector: '.contactContainer' },
+];
+
+const NavLink = ({ nodeId, selector }) => {
+	const { activeNodeId, setActiveNodeId } = useContext(IntersectionContext);
+
+	// vertical scroll takes a classSelector .sectionName
+	const scrollToSection = classSelector =>
+		document
+			.querySelector(classSelector)
+			.scrollIntoView({ behavior: 'smooth' });
+
+	return (
+		<span
+			id={nodeId}
+			/* remove dot from selector before building className */
+			className={activeNodeId === nodeId ? 'activeClass' : ''}
+			onClick={() => {
+				setActiveNodeId(nodeId);
+				scrollToSection(selector);
+			}}
+		>
+			{nodeId.charAt(0).toUpperCase() + nodeId.slice(1)}
+		</span>
+	);
+};
 
 const Nav = ({ setModalVisible, setModalComponent }) => {
-	const homeRef = useRef(null);
-	const aboutRef = useRef(null);
-	const recruiterRef = useRef(null);
-	const portfolioRef = useRef(null);
-	const contactRef = useRef(null);
-	const easterEggRef = useRef(null);
-
-	const refArray = [
-		homeRef,
-		aboutRef,
-		recruiterRef,
-		portfolioRef,
-		contactRef,
-		easterEggRef,
-	];
-
-	// toggleActiveClass toggles activeClass by ref
-	const toggleActiveClass = nodeId => {
-		// special case: recruiter modal
-		if (nodeId === 'recruiter') {
-			easterEggRef.current.classList.remove('activeClass');
-			return recruiterRef.current.classList.toggle('activeClass');
-		}
-		if (nodeId === 'easterEgg') {
-			recruiterRef.current.classList.remove('activeClass');
-			return easterEggRef.current.classList.toggle('activeClass');
-		}
-
-		refArray.forEach(ref => {
-			// otherwise, toggle activeClass unless link already active
-			if (ref.current.id === nodeId) {
-				if (ref.current.classList.contains('activeClass')) {
-					return;
-				}
-
-				ref.current.classList.toggle('activeClass');
-			} else {
-				if (ref.current.classList.contains('activeClass')) {
-					ref.current.classList.toggle('activeClass');
-				}
-			}
-		});
-	};
+	const { activeNodeId } = useContext(IntersectionContext);
 
 	return (
 		<nav>
-			<span
-				id='welcome'
-				ref={homeRef}
-				onClick={() => {
-					scrollIntoView('.welcomeContainer');
-					setModalVisible(false);
-					toggleActiveClass('welcome');
-				}}
-			>
-				Home
-			</span>
-			<span
-				id='about'
-				ref={aboutRef}
-				onClick={() => {
-					scrollIntoView('.aboutContainer');
-					setModalVisible(false);
-					toggleActiveClass('about');
-				}}
-			>
-				About
-			</span>
+			{staticNavLinks.map(({ nodeId, selector }, idx) => (
+				<NavLink key={idx} nodeId={nodeId} selector={selector} />
+			))}
 			<span
 				id='recruiter'
-				ref={recruiterRef}
 				onClick={() => {
-					setModalComponent('Recruiter');
-					setModalVisible(
-						!recruiterRef.current.classList.contains('activeClass')
-					);
-					toggleActiveClass('recruiter');
+					setModalComponent('recruiter');
 				}}
 			>
 				<i className='material-icons'>star</i>Recruiters
 			</span>
 			<span
-				id='portfolio'
-				ref={portfolioRef}
-				onClick={() => {
-					scrollIntoView('.portfolioContainer');
-					setModalVisible(false);
-					toggleActiveClass('portfolio');
-				}}
-			>
-				Portfolio
-			</span>
-			<span
-				id='contact'
-				ref={contactRef}
-				onClick={() => {
-					scrollIntoView('.contactContainer');
-					setModalVisible(false);
-					toggleActiveClass('contact');
-				}}
-			>
-				Contact
-			</span>
-			<span
 				id='easterEgg'
-				ref={easterEggRef}
 				onClick={() => {
-					setModalComponent('EasterEgg');
-					setModalVisible(
-						!easterEggRef.current.classList.contains('activeClass')
-					);
-					toggleActiveClass('easterEgg');
+					setModalComponent('easterEgg');
 				}}
 			>
 				<img

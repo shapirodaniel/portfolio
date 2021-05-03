@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Welcome.css';
+import { IntersectionContext } from './context/intersectionContext';
 
 const Welcome = () => {
+	const { setActiveNodeId } = useContext(IntersectionContext);
+
 	return (
 		<section className='welcomeContainer'>
 			<h1>
@@ -12,14 +15,10 @@ const Welcome = () => {
 			<div
 				className='viewMyWork'
 				onClick={() => {
+					setActiveNodeId('about');
 					document.querySelector('.aboutContainer').scrollIntoView({
 						behavior: 'smooth',
 					});
-
-					// hack to manipulate activeClass on nav elements
-					// when navigating from welcome page to about page
-					document.querySelector('#welcome').classList.remove('activeClass');
-					document.querySelector('#about').classList.toggle('activeClass');
 				}}
 			>
 				<span>View my work</span>
