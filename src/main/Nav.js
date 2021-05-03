@@ -79,9 +79,9 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 				ref={recruiterRef}
 				onClick={() => {
 					setModalComponent('Recruiter');
-					recruiterRef.current.classList.contains('activeClass')
-						? setModalVisible(false)
-						: setModalVisible(true);
+					setModalVisible(
+						!recruiterRef.current.classList.contains('activeClass')
+					);
 					toggleActiveClass('recruiter');
 				}}
 			>
@@ -114,9 +114,9 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 				ref={easterEggRef}
 				onClick={() => {
 					setModalComponent('EasterEgg');
-					easterEggRef.current.classList.contains('activeClass')
-						? setModalVisible(false)
-						: setModalVisible(true);
+					setModalVisible(
+						!easterEggRef.current.classList.contains('activeClass')
+					);
 					toggleActiveClass('easterEgg');
 				}}
 			>
