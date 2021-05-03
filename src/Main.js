@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Main.css';
 import {
 	Modal,
@@ -11,9 +11,13 @@ import {
 	EasterEgg,
 } from './main/';
 
+import { IntersectionContext } from './context/intersectionContext';
+
 const Main = () => {
 	const [isModalVisible, setModalVisible] = useState(false);
-	const [modalComponent, setModalComponent] = useState('Recruiter');
+	const [modalComponent, setModalComponent] = useState('recruiter');
+
+	const { setActiveNodeId } = useContext(IntersectionContext);
 
 	return (
 		<main>
@@ -22,8 +26,13 @@ const Main = () => {
 				setModalComponent={setModalComponent}
 			/>
 			{isModalVisible && (
-				<Modal closeModal={() => setModalVisible(false)}>
-					{modalComponent === 'Recruiter' ? <Recruiter /> : <EasterEgg />}
+				<Modal
+					closeModal={() => {
+						setModalVisible(false);
+						setActiveNodeId('');
+					}}
+				>
+					{modalComponent === 'recruiter' ? <Recruiter /> : <EasterEgg />}
 				</Modal>
 			)}
 			<About />
