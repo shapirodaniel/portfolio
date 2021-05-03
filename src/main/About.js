@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useRef, useContext } from 'react';
 import './About.css';
 import TechList from './TechList';
+import { IntersectionContext } from '../context/intersectionContext';
+import { useOnScreen } from '../customHooks/useOnScreen';
 
 const aboutCards = [
 	{
@@ -44,8 +46,19 @@ const AboutCard = ({ card }) => {
 };
 
 const About = () => {
+	const ref = useRef(null);
+
+	const { setActiveNodeId } = useContext(IntersectionContext);
+
+	const isOnScreen = useOnScreen(ref);
+
+	if (isOnScreen) {
+		console.log('hi im onscreen');
+		setActiveNodeId('about');
+	}
+
 	return (
-		<section className='aboutContainer'>
+		<section ref={ref} className='aboutContainer'>
 			<h3>ABOUT</h3>
 			<div className='aboutCardsList'>
 				{aboutCards.map(card => (

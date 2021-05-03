@@ -62,7 +62,7 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 			{/* link to recruiter modal */}
 			<span
 				id='recruiter'
-				className={activeNodeId === 'recruiter' && 'activeClass'}
+				className={activeNodeId === 'recruiter' ? 'activeClass' : ''}
 				onClick={() => handleModal('recruiter')}
 			>
 				<i className='material-icons'>star</i>Recruiters
@@ -71,7 +71,7 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 			{/* link to easterEgg modal */}
 			<span
 				id='easterEgg'
-				className={activeNodeId === 'easterEgg' && 'activeClass'}
+				className={activeNodeId === 'easterEgg' ? 'activeClass' : ''}
 				onClick={() => handleModal('easterEgg')}
 			>
 				<img
