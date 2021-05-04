@@ -67,7 +67,7 @@ const Stars = ({ children }) => {
 			{children}
 			{starsArray}
 
-			{/* trace path and leave a dotted trail? */}
+			{/* initial className is "ignore" to hide svgs */}
 
 			{/* forward animation on intersection with viewport */}
 			<div ref={rocketContainerAcross}>
@@ -81,6 +81,7 @@ const Stars = ({ children }) => {
 				<img className='ignore' ref={leftJet} src={'/jet.svg'} alt='jet' />
 				<img className='ignore' ref={rightJet} src={'/jet.svg'} alt='jet' />
 			</div>
+
 			{/* infinite animation "orbiting" .pinkMoon img,
 			scaled down on approach to give depth illusion */}
 			<div ref={rocketContainerOrbit}>

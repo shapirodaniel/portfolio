@@ -6,7 +6,7 @@
 	height: 50px;
 	width: auto;
 	transform: rotate(-20deg);
-	animation: leftJet-visibility 10s steps(2) forwards;
+	animation: leftJet-visibility 10s steps(1) forwards;
 	animation-delay: 1s;
 }
 
@@ -57,8 +57,10 @@
 	67% {
 	}
 	70% {
+		visibility: visible;
 	}
 	73% {
+		visibility: hidden;
 	}
 	76% {
 	}
