@@ -14,3 +14,7 @@
 	width: auto;
 	object-position: 3em 4.2em;
 }
+
+.ignore {
+	visibility: hidden;
+}

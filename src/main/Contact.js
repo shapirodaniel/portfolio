@@ -1,9 +1,8 @@
-import React, { useRef, useContext, useEffect } from 'react';
+import React from 'react';
 import ContactBar from './ContactBar';
 import './Contact.css';
 
-import { useOnScreen } from '../customHooks/useOnScreen';
-import { IntersectionContext } from '../context/intersectionContext';
+import { useNav } from '../customHooks/useNav';
 
 const links = [
 	{
@@ -27,20 +26,10 @@ const links = [
 ];
 
 const Contact = () => {
-	const ref = useRef(null);
-
-	const { setActiveNodeId } = useContext(IntersectionContext);
-
-	const isOnScreen = useOnScreen(ref);
-
-	useEffect(() => {
-		if (isOnScreen) {
-			setActiveNodeId('contact');
-		}
-	}, [isOnScreen, setActiveNodeId]);
+	const contactRef = useNav('contact');
 
 	return (
-		<section ref={ref} className='contactContainer'>
+		<section ref={contactRef} className='contactContainer'>
 			<h3>CONTACT</h3>
 			<div className='icons'>
 				{links.map(({ id, src, href, alt }) => (

@@ -71,21 +71,28 @@ const Stars = ({ children }) => {
 
 			{/* forward animation on intersection with viewport */}
 			<div ref={rocketContainerAcross}>
-				<img ref={rocketShip} src={'/rocket-ship.svg'} alt='rocket-ship' />
-				<img ref={speed} src={'/speed.svg'} alt='speed' />
-				<img ref={leftJet} src={'/jet.svg'} alt='jet' />
-				<img ref={rightJet} src={'/jet.svg'} alt='jet' />
+				<img
+					className='ignore'
+					ref={rocketShip}
+					src={'/rocket-ship.svg'}
+					alt='rocket-ship'
+				/>
+				<img className='ignore' ref={speed} src={'/speed.svg'} alt='speed' />
+				<img className='ignore' ref={leftJet} src={'/jet.svg'} alt='jet' />
+				<img className='ignore' ref={rightJet} src={'/jet.svg'} alt='jet' />
 			</div>
 			{/* infinite animation "orbiting" .pinkMoon img,
 			scaled down on approach to give depth illusion */}
 			<div ref={rocketContainerOrbit}>
 				<div>
 					<img
+						className='ignore'
 						ref={rocketShipOrbit}
 						src={'/rocket-ship.svg'}
 						alt='rocket-ship'
 					/>
 					<img
+						className='ignore'
 						ref={rocketShipTrail}
 						src={'/rocket-ship-trail.svg'}
 						alt='rocket-ship-trail'

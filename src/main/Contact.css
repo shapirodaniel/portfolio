@@ -43,14 +43,8 @@
 	width: auto;
 	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
 		brightness(83%) contrast(90%);
-	transition: filter 0.1s ease;
 }
 
 .icons a:hover {
 	background-color: var(--nightLightAccentHover);
-}
-
-.icons a:hover > .linkIcon {
-	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
-		brightness(83%) contrast(90%);
 }

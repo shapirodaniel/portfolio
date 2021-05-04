@@ -1,9 +1,8 @@
-import React, { useRef, useContext, useEffect } from 'react';
+import React from 'react';
 import YoutubeEmbed from './YoutubeEmbed';
 import { portfolioContent } from './portfolioContent';
 import './Portfolio.css';
-import { useOnScreen } from '../customHooks/useOnScreen';
-import { IntersectionContext } from '../context/intersectionContext';
+import { useNav } from '../customHooks/useNav';
 
 const LeftPanelLinkedImg = ({
 	siteHref,
@@ -72,20 +71,10 @@ const PortfolioCard = ({ card }) => {
 };
 
 const Portfolio = () => {
-	const ref = useRef(null);
-
-	const { setActiveNodeId } = useContext(IntersectionContext);
-
-	const isOnScreen = useOnScreen(ref);
-
-	useEffect(() => {
-		if (isOnScreen) {
-			setActiveNodeId('portfolio');
-		}
-	}, [isOnScreen, setActiveNodeId]);
+	const portfolioRef = useNav('portfolio');
 
 	return (
-		<section ref={ref} className='portfolioContainer'>
+		<section ref={portfolioRef} className='portfolioContainer'>
 			<h3>PORTFOLIO</h3>
 			<div className='portfolioCards'>
 				{portfolioContent.map(card => (
