@@ -21,6 +21,13 @@ h1 {
 	font-weight: 500;
 }
 
+.linksAndViewBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: min-content;
+}
+
 .viewMyWork {
 	display: flex;
 	align-items: center;

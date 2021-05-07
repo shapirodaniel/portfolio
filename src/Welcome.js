@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactBtns from './main/ContactBtns';
 import './Welcome.css';
 import { useNav } from './customHooks/useNav';
 
@@ -11,16 +12,19 @@ const Welcome = () => {
 				<br />
 				I'm a full-stack software engineer.
 			</h1>
-			<div
-				className='viewMyWork'
-				onClick={() =>
-					document
-						.querySelector('.aboutContainer')
-						.scrollIntoView({ behavior: 'smooth' })
-				}
-			>
-				<span>View my work</span>
-				<i className='material-icons'>keyboard_arrow_right</i>
+			<div className='linksAndViewBtn'>
+				<ContactBtns />
+				<div
+					className='viewMyWork'
+					onClick={() =>
+						document
+							.querySelector('.aboutContainer')
+							.scrollIntoView({ behavior: 'smooth' })
+					}
+				>
+					<span>View my work</span>
+					<i className='material-icons'>keyboard_arrow_right</i>
+				</div>
 			</div>
 		</section>
 	);
