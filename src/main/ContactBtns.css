@@ -1,0 +1,70 @@
+/* in Welcome component */
+
+.welcomeContainer .icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em;
+}
+
+.welcomeContainer .icons a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	width: 60px;
+	padding: 1em;
+	margin: 2em;
+	background-color: inherit;
+	transition: background-color 0.1s ease;
+	transition: transform 0.3s ease;
+}
+
+.welcomeContainer .icons a:hover {
+	transform: translateY(2px);
+	background-color: inherit;
+	border: 2px solid white;
+}
+
+.welcomeContainer .linkIcon {
+	height: 48px;
+	width: auto;
+	filter: invert();
+}
+
+/* in Contact component */
+
+.contactContainer .icons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	height: calc(100% - 26em);
+	margin-bottom: -4em;
+}
+
+.contactContainer .icons a {
+	margin: 1em 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 14em;
+	width: 14em;
+	padding: 0.5em;
+	border-radius: 10px;
+	background-color: var(--nightLightAccent);
+	box-shadow: 5px 5px 0 var(--nightDarkAccent);
+	transition: background-color 0.1s ease;
+	transition: transform 0.3s ease;
+}
+
+.contactContainer .icons a:hover {
+	transform: translateY(2px);
+	background-color: var(--nightLightAccentHover);
+}
+
+.contactContainer .linkIcon {
+	max-height: 8em;
+	width: auto;
+	filter: invert(11%) sepia(25%) saturate(5905%) hue-rotate(313deg)
+		brightness(83%) contrast(90%);
+}
