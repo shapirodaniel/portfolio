@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useOnScreen } from '../customHooks/useOnScreen';
-import { IntersectionContext } from '../context/intersectionContext';
 import './Stars.css';
 import './rocket-ship/rocketShip.css';
 import './rocket-ship/speed.css';
@@ -31,8 +30,6 @@ let starsArray = new Array(400).fill(null).map((_star, idx) => (
 	 when the first rocket container appears in view */
 
 const Stars = ({ children }) => {
-	const { activeNodeId } = useContext(IntersectionContext);
-
 	const rocketContainerAcross = useRef(null);
 	const rocketShip = useRef(null);
 	const speed = useRef(null);
@@ -42,6 +39,8 @@ const Stars = ({ children }) => {
 	const rocketContainerOrbit = useRef(null);
 	const rocketShipOrbit = useRef(null);
 	const rocketShipTrail = useRef(null);
+
+	const isOnScreen = useOnScreen(rocketContainerAcross);
 
 	useEffect(() => {
 		const refs = [
@@ -58,10 +57,11 @@ const Stars = ({ children }) => {
 			{ ref: rocketShipTrail, name: 'rocketShipTrail' },
 		];
 
-		if (activeNodeId === 'contact') {
+		if (isOnScreen) {
+			console.log('rocketcontainer onscreen!');
 			refs.forEach(({ ref, name }) => (ref.current.className = name));
 		}
-	}, [activeNodeId]);
+	}, [isOnScreen]);
 
 	return (
 		<section className='skyContainer'>
@@ -71,7 +71,7 @@ const Stars = ({ children }) => {
 			{/* initial className is "ignore" to hide svgs */}
 
 			{/* forward animation on intersection with viewport */}
-			<div className='rocketContainerAcross' ref={rocketContainerAcross}>
+			<div className='rocketContainerAcross ignore' ref={rocketContainerAcross}>
 				<img
 					className='ignore'
 					ref={rocketShip}
@@ -85,7 +85,7 @@ const Stars = ({ children }) => {
 
 			{/* infinite animation "orbiting" .pinkMoon img,
 			scaled down on approach to give depth illusion */}
-			<div className='rocketContainerOrbit' ref={rocketContainerOrbit}>
+			<div className='rocketContainerOrbit ignore' ref={rocketContainerOrbit}>
 				<div>
 					<img
 						className='ignore'
