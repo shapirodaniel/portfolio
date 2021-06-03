@@ -1,5 +1,4 @@
 .contactContainer {
-	padding-top: 4em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -9,4 +8,5 @@
 
 .contactContainer h3 {
 	color: white;
+	padding-top: 3em;
 }

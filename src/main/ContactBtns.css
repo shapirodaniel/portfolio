@@ -39,12 +39,18 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	margin-top: 2em;
+	margin-bottom: 24em;
 }
 
 @media (min-width: 1200px) {
 	.contactContainer .icons {
 		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 770px) {
+	.contactContainer .icons {
+		margin-bottom: 14em;
 	}
 }
 
@@ -78,6 +84,10 @@
 }
 
 @media (max-width: 420px) {
+	.contactContainer .icons {
+		margin-top: 0.5em;
+	}
+
 	.contactContainer .icons a:last-child {
 		margin-top: 2em;
 	}
