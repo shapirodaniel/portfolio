@@ -18,3 +18,10 @@
 .ignore {
 	visibility: hidden;
 }
+
+@media (max-width: 1200px) {
+	.rocketContainerAcross,
+	.rocketContainerOrbit {
+		display: none;
+	}
+}

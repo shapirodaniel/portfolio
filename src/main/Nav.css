@@ -7,7 +7,7 @@ nav {
 	color: white;
 	background-color: var(--dayTextColor);
 	max-height: 4em;
-	overflow: auto;
+	overflow-x: scroll;
 	white-space: nowrap;
 }
 

@@ -70,7 +70,7 @@ const Stars = ({ children }) => {
 			{/* initial className is "ignore" to hide svgs */}
 
 			{/* forward animation on intersection with viewport */}
-			<div ref={rocketContainerAcross}>
+			<div className='rocketContainerAcross' ref={rocketContainerAcross}>
 				<img
 					className='ignore'
 					ref={rocketShip}
@@ -84,7 +84,7 @@ const Stars = ({ children }) => {
 
 			{/* infinite animation "orbiting" .pinkMoon img,
 			scaled down on approach to give depth illusion */}
-			<div ref={rocketContainerOrbit}>
+			<div className='rocketContainerOrbit' ref={rocketContainerOrbit}>
 				<div>
 					<img
 						className='ignore'
