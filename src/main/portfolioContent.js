@@ -46,7 +46,7 @@ export const portfolioContent = [
 		],
 		siteHref: 'https://connect-kanban.herokuapp.com',
 		githubHref: 'https://github.com/shapirodaniel/connect',
-		embedId: '2UeevSTOnIs',
+		embedId: 'VbKLG30Nuo0',
 	},
 	{
 		id: 2,
