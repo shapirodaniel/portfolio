@@ -29,8 +29,8 @@
 export const portfolioContent = [
 	{
 		id: 1,
-		logoSrc: '/note-ary-logo.png',
-		logoAltText: 'note-ary-logo',
+		logoSrc: '/connect-logo.svg',
+		logoAltText: 'connect-logo',
 		description:
 			'A project management suite that allows users to create and join organizations, invite teammates to collaborate on projects with Kanban-style boards, and stay in touch with realtime updates/communication support',
 		techStack: [
@@ -44,8 +44,8 @@ export const portfolioContent = [
 				],
 			},
 		],
-		siteHref: 'https://note-ary.herokuapp.com',
-		githubHref: 'https://github.com/shapirodaniel/note-ary',
+		siteHref: 'https://connect-kanban.herokuapp.com',
+		githubHref: 'https://github.com/shapirodaniel/connect',
 		embedId: '2UeevSTOnIs',
 	},
 	{

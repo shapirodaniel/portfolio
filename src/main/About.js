@@ -57,13 +57,13 @@ const About = () => {
 			</div>
 			<div className='photoAndTech'>
 				<div className='myPhotoAndBlurb'>
-					<img className='funArrow' src='/fun-arrow.svg' alt='fun-arrow' />
 					<img
 						className='myPhoto'
 						src='https://i.imgur.com/FEcY5qC.jpg'
 						alt='daniel-headshot'
 					/>
 					<div className='blurb'>
+						<img className='funArrow' src='/fun-arrow.svg' alt='fun-arrow' />
 						<span>What I'm up to currently</span>
 						<p>
 							Building a{' '}

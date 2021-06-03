@@ -33,8 +33,9 @@
 
 .pc-rightPanel img {
 	width: 100%;
-	height: auto;
 	margin: 0 auto;
+	object-fit: contain;
+	height: 6em;
 }
 
 .architecture {

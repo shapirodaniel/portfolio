@@ -22,8 +22,8 @@
 	justify-content: center;
 	background-color: white;
 	border-radius: 50%;
-	height: 100px;
-	width: 100px;
+	height: 80px;
+	width: 80px;
 	box-shadow: 4px 4px 10px var(--dayTextColor);
 }
 
@@ -35,7 +35,7 @@
 }
 
 .techLogo {
-	height: 56px;
+	height: 48px;
 }
 
 .singleList {
