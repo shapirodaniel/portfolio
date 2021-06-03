@@ -1,6 +1,6 @@
 {
-	"name": "daniel-shapiro-software-engineer",
-	"homepage": "http://shapirodaniel.github.io/my-site",
+	"name": "daniel-shapiro-software-engineer-portfolio",
+	"homepage": "http://shapirodaniel.github.io/portfolio",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
