@@ -17,7 +17,6 @@ const proficient = [
 
 const learning = [
 	{ src: 'https://i.imgur.com/jkSzrTz.png', text: 'TypeScript' },
-	{ src: 'https://i.imgur.com/aILyU5h.png', text: 'TypeORM' },
 	{ src: 'https://i.imgur.com/n2QpqrV.png', text: 'GraphQL' },
 	{ src: 'https://i.imgur.com/ed1G33y.png', text: 'Python' },
 	{ src: 'https://i.imgur.com/sm4i82J.png', text: 'Rust' },

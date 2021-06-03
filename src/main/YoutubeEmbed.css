@@ -7,6 +7,12 @@
 	width: 50%;
 }
 
+@media (max-width: 930px) {
+	.video-responsive {
+		width: 100%;
+	}
+}
+
 .video-responsive iframe {
 	left: 0;
 	top: 0;
