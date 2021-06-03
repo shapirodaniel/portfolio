@@ -42,12 +42,6 @@
 	margin-bottom: 24em;
 }
 
-@media (min-width: 1200px) {
-	.contactContainer .icons {
-		margin-bottom: 0;
-	}
-}
-
 @media (max-width: 770px) {
 	.contactContainer .icons {
 		margin-bottom: 14em;

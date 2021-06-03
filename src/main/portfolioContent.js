@@ -50,17 +50,19 @@ export const portfolioContent = [
 	},
 	{
 		id: 2,
-		logoSrc: '/guessing-game-logo.png',
-		logoAltText: 'the-guessing-game-logo',
-		name: 'The Guessing Game',
+		logoSrc: '/sp-scrollable-logo.svg',
+		logoAltText: 'single-page-scrollable-site-navigation',
+		name: 'Single-Page Scrollable Site Navigation with React Custom Hooks',
 		description:
-			"A detailed look into refactoring an imperative code base to React, React Hooks, and state management via React's Context API",
-		techStack: [{ 'Front-end': ['React + React Context API'] }],
+			'Leveraging IntersectionObserver + useRef + useContext to build a responsive nav for a single-page scrollable site',
+		techStack: [
+			{ 'Front-end': ['React + React Context API', 'React custom hooks'] },
+		],
 		siteHref:
-			'https://medium.com/geekculture/rebuilding-an-imperatively-coded-game-from-scratch-in-react-9a082ad002c0',
-		githubHref: 'https://github.com/shapirodaniel/guessing-game-react',
-		linkedImgUrl: '/guessing-game-medium-screencap.png',
-		linkedImgUrlAltText: 'the-guessing-game',
+			'https://medium.com/geekculture/scrollable-single-page-site-navigation-with-react-custom-hooks-4e7af716f6b1',
+		gihubHref: 'https://github.com/shapirodaniel/single-page-nav',
+		linkedImgUrl: '/sp-scrollable-medium-screencap.png',
+		linkedImgUrlAltText: 'use-nav-custom-hook',
 	},
 	{
 		id: 3,
@@ -76,5 +78,19 @@ export const portfolioContent = [
 		siteHref: 'https://breadbakersfriend.com',
 		githubHref: 'https://github.com/shapirodaniel/breadbakersfriend',
 		embedId: 'gGb3Wp1s33w', // https://youtu.be/gGb3Wp1s33w
+	},
+	{
+		id: 4,
+		logoSrc: '/guessing-game-logo.png',
+		logoAltText: 'the-guessing-game-logo',
+		name: 'The Guessing Game',
+		description:
+			"A detailed look into refactoring an imperative code base to React, React Hooks, and state management via React's Context API",
+		techStack: [{ 'Front-end': ['React + React Context API'] }],
+		siteHref:
+			'https://medium.com/geekculture/rebuilding-an-imperatively-coded-game-from-scratch-in-react-9a082ad002c0',
+		githubHref: 'https://github.com/shapirodaniel/guessing-game-react',
+		linkedImgUrl: '/guessing-game-medium-screencap.png',
+		linkedImgUrlAltText: 'the-guessing-game',
 	},
 ];
