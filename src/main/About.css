@@ -62,6 +62,9 @@
 		align-items: center;
 		justify-content: flex-start;
 	}
+	.funArrow {
+		display: none;
+	}
 }
 
 .aboutContainer h3 {
@@ -119,10 +122,16 @@
 	position: relative;
 }
 
+.blurb p {
+	width: max-content;
+	min-width: 360px;
+}
+
 .blurb span {
 	font-weight: 500;
 	font-size: 1.4em;
 	padding-bottom: 1em;
+	width: 100%;
 }
 
 .blurb p,
