@@ -60,31 +60,31 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 			))}
 
 			{/* link to recruiter modal */}
-			<span
+			{/* <span
 				id='recruiter'
 				className={activeNodeId === 'recruiter' ? 'activeClass' : ''}
 				onClick={() => handleModal('recruiter')}
 			>
 				<i className='material-icons'>star</i>Recruiters
-			</span>
+			</span> */}
 
 			{/* link to easterEgg modal */}
-			<span
+			{/* <span
 				id='easterEgg'
 				className={activeNodeId === 'easterEgg' ? 'activeClass' : ''}
 				onClick={() => handleModal('easterEgg')}
 			>
 				<img
 					className='easterEggIcon'
-					src={'/easter-egg.svg'}
+					src={'/portfolio/easter-egg.svg'}
 					alt={'easter-egg-icon'}
 				/>
-			</span>
+			</span> */}
 
 			{/* onHover easterEggIcon shows this message to right */}
-			<span className='ee-conditionalText'>
+			{/* <span className='ee-conditionalText'>
 				<i className='material-icons'>west</i> Easter Egg! :)
-			</span>
+			</span> */}
 		</nav>
 	);
 };

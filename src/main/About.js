@@ -63,7 +63,11 @@ const About = () => {
 						alt='daniel-headshot'
 					/>
 					<div className='blurb'>
-						<img className='funArrow' src='/fun-arrow.svg' alt='fun-arrow' />
+						<img
+							className='funArrow'
+							src='/portfolio/fun-arrow.svg'
+							alt='fun-arrow'
+						/>
 						<span>What I'm up to currently</span>
 						<p>
 							Building a{' '}

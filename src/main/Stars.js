@@ -29,7 +29,11 @@ const Stars = ({ children }) => {
 			{children}
 			{starsArray}
 
-			<img className='pinkMoon' src='/pink-moon.png' alt='pink-moon' />
+			<img
+				className='pinkMoon'
+				src='/portfolio/pink-moon.png'
+				alt='pink-moon'
+			/>
 		</section>
 	);
 };

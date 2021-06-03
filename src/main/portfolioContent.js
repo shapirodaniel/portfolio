@@ -29,7 +29,7 @@
 export const portfolioContent = [
 	{
 		id: 1,
-		logoSrc: '/connect-logo.svg',
+		logoSrc: '/portfolio/connect-logo.svg',
 		logoAltText: 'connect-logo',
 		description:
 			'A project management suite that allows users to create and join organizations, invite teammates to collaborate on projects with Kanban-style boards, and stay in touch with realtime updates/communication support',
@@ -50,7 +50,7 @@ export const portfolioContent = [
 	},
 	{
 		id: 2,
-		logoSrc: '/sp-scrollable-logo.svg',
+		logoSrc: '/portfolio/sp-scrollable-logo.svg',
 		logoAltText: 'single-page-scrollable-site-navigation',
 		name: 'Single-Page Scrollable Site Navigation with React Custom Hooks',
 		description:
@@ -61,12 +61,12 @@ export const portfolioContent = [
 		siteHref:
 			'https://medium.com/geekculture/scrollable-single-page-site-navigation-with-react-custom-hooks-4e7af716f6b1',
 		gihubHref: 'https://github.com/shapirodaniel/single-page-nav',
-		linkedImgUrl: '/sp-scrollable-medium-screencap.png',
+		linkedImgUrl: '/portfolio/sp-scrollable-medium-screencap.png',
 		linkedImgUrlAltText: 'use-nav-custom-hook',
 	},
 	{
 		id: 3,
-		logoSrc: '/breadbakersfriend-logo.png',
+		logoSrc: '/portfolio/breadbakersfriend-logo.png',
 		logoAltText: 'bread-bakers-friend-logo',
 		name: "Bread Baker's Friend",
 		description:
@@ -81,7 +81,7 @@ export const portfolioContent = [
 	},
 	{
 		id: 4,
-		logoSrc: '/guessing-game-logo.png',
+		logoSrc: '/portfolio/guessing-game-logo.png',
 		logoAltText: 'the-guessing-game-logo',
 		name: 'The Guessing Game',
 		description:
@@ -90,7 +90,7 @@ export const portfolioContent = [
 		siteHref:
 			'https://medium.com/geekculture/rebuilding-an-imperatively-coded-game-from-scratch-in-react-9a082ad002c0',
 		githubHref: 'https://github.com/shapirodaniel/guessing-game-react',
-		linkedImgUrl: '/guessing-game-medium-screencap.png',
+		linkedImgUrl: '/portfolio/guessing-game-medium-screencap.png',
 		linkedImgUrlAltText: 'the-guessing-game',
 	},
 ];

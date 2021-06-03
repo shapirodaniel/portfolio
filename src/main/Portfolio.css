@@ -85,6 +85,7 @@
 	text-decoration: none;
 	width: 50%;
 	max-width: 220px;
+	cursor: pointer;
 }
 
 .btnsContainer a:first-child {
