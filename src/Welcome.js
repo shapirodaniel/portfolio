@@ -13,7 +13,6 @@ const Welcome = () => {
 				I'm a full-stack software engineer.
 			</h1>
 			<div className='linksAndViewBtn'>
-				<ContactBtns />
 				<div
 					className='viewMyWork'
 					onClick={() =>
@@ -26,6 +25,7 @@ const Welcome = () => {
 					<i className='material-icons'>keyboard_arrow_right</i>
 				</div>
 			</div>
+			<ContactBtns />
 		</section>
 	);
 };
