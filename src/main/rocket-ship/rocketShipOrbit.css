@@ -4,7 +4,7 @@
 	position: relative;
 	overflow: hidden;
 	bottom: 0;
-	right: -36%;
+	left: 34%;
 	height: 24em;
 	width: 24em;
 	animation: hide-orbit 16s infinite;

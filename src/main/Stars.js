@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import { useOnScreen } from '../customHooks/useOnScreen';
+import { IntersectionContext } from '../context/intersectionContext';
 import './Stars.css';
 import './rocket-ship/rocketShip.css';
 import './rocket-ship/speed.css';
@@ -30,6 +31,8 @@ let starsArray = new Array(400).fill(null).map((_star, idx) => (
 	 when the first rocket container appears in view */
 
 const Stars = ({ children }) => {
+	const { activeNodeId } = useContext(IntersectionContext);
+
 	const rocketContainerAcross = useRef(null);
 	const rocketShip = useRef(null);
 	const speed = useRef(null);
@@ -39,8 +42,6 @@ const Stars = ({ children }) => {
 	const rocketContainerOrbit = useRef(null);
 	const rocketShipOrbit = useRef(null);
 	const rocketShipTrail = useRef(null);
-
-	const isOnScreen = useOnScreen(rocketContainerAcross);
 
 	useEffect(() => {
 		const refs = [
@@ -57,10 +58,10 @@ const Stars = ({ children }) => {
 			{ ref: rocketShipTrail, name: 'rocketShipTrail' },
 		];
 
-		if (isOnScreen) {
+		if (activeNodeId === 'contact') {
 			refs.forEach(({ ref, name }) => (ref.current.className = name));
 		}
-	}, [rocketContainerAcross, isOnScreen]);
+	}, [activeNodeId]);
 
 	return (
 		<section className='skyContainer'>

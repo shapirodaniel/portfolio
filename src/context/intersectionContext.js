@@ -10,6 +10,8 @@ const IntersectionProvider = ({ children }) => {
 		setActiveNodeId,
 	};
 
+	console.log(activeNodeId);
+
 	return (
 		<IntersectionContext.Provider value={providerValue}>
 			{children}
