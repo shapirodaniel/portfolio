@@ -52,7 +52,7 @@
 	.funArrow {
 		max-height: 180px;
 		top: -1em;
-		left: 86%;
+		left: 92%;
 	}
 }
 
@@ -96,8 +96,8 @@
 
 .funArrow {
 	position: absolute;
-	bottom: 4.4em;
-	right: -5em;
+	bottom: 3.4em;
+	right: -7em;
 	height: 220px;
 	width: auto;
 }
