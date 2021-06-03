@@ -38,7 +38,14 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	height: calc(100% - 26em);
+	margin-top: 2em;
+	margin-bottom: 24em;
+}
+
+@media (min-width: 1200px) {
+	.contactContainer .icons {
+		margin-bottom: 0;
+	}
 }
 
 .contactContainer .icons a {
@@ -54,6 +61,25 @@
 	box-shadow: 5px 5px 0 var(--nightDarkAccent);
 	transition: background-color 0.1s ease;
 	transition: transform 0.3s ease;
+}
+
+@media (max-width: 660px) {
+	.contactContainer .icons {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contactContainer .icons a {
+		height: 6em;
+		width: 6em;
+	}
+}
+
+@media (max-width: 420px) {
+	.contactContainer .icons a:last-child {
+		margin-top: 2em;
+		margin-bottom: -2em;
+	}
 }
 
 .contactContainer .icons a:hover {

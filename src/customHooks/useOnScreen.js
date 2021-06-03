@@ -6,7 +6,9 @@ export const useOnScreen = ref => {
 	const observer = new IntersectionObserver(
 		([entry]) => setOnScreen(entry.isIntersecting),
 		{
-			threshold: [0.25, 0.5, 0.75],
+			threshold: new Array(10)
+				.fill(null)
+				.map((_, idx) => Math.round((idx + 1) / 10)),
 		}
 	);
 
