@@ -23,6 +23,12 @@
 	max-width: 450px;
 }
 
+@media (max-width: 930px) {
+	.leftPanelContainer {
+		margin: 0 auto;
+	}
+}
+
 .leftPanelContainer img {
 	width: 100%;
 }
