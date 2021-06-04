@@ -35,9 +35,9 @@ const NavLink = ({ nodeId, selector, closeModal }) => {
 };
 
 const Nav = ({ setModalVisible, setModalComponent }) => {
-	const { activeNodeId, setActiveNodeId } = useContext(IntersectionContext);
+	// const { activeNodeId, setActiveNodeId } = useContext(IntersectionContext);
 
-	const handleModal = nodeId => {
+	/* const handleModal = nodeId => {
 		if (activeNodeId === nodeId) {
 			setActiveNodeId('');
 			return setModalVisible(false);
@@ -45,7 +45,7 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 		setActiveNodeId(nodeId);
 		setModalVisible(true);
 		setModalComponent(nodeId);
-	};
+	}; */
 
 	return (
 		<nav>

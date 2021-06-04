@@ -7,12 +7,11 @@ nav {
 	color: white;
 	background-color: var(--dayTextColor);
 	max-height: 4em;
-	overflow-x: scroll;
 	white-space: nowrap;
 }
 
 nav span {
-	font-size: 18px;
+	font-size: 14px;
 	border-bottom: 1px solid transparent;
 	transition: border-bottom 0.2s ease;
 	transition-delay: 0.25s;
@@ -25,6 +24,12 @@ nav span:hover:not(.ee-conditionalText) {
 	border-bottom: 1px solid white;
 }
 
+@media (max-width: 500px) {
+	nav span:hover:not(.ee-conditionalText) {
+		border-bottom: 1px solid transparent;
+	}
+}
+
 nav span:hover i:not(.ee-conditionalText i) {
 	color: gold;
 }
@@ -35,6 +40,12 @@ nav span.activeClass i {
 
 nav span.activeClass {
 	border-bottom-color: var(--nightLightAccent);
+}
+
+@media (max-width: 500px) {
+	nav span.activeClass {
+		border-bottom-color: transparent;
+	}
 }
 
 .easterEggIcon {
