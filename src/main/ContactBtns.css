@@ -49,7 +49,7 @@
 }
 
 .contactContainer .icons a {
-	margin: 1em 2em;
+	margin: 1em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -80,10 +80,6 @@
 @media (max-width: 420px) {
 	.contactContainer .icons {
 		margin-top: 0.5em;
-	}
-
-	.contactContainer .icons a:last-child {
-		margin-top: 2em;
 	}
 }
 
