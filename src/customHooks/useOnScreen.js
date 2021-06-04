@@ -6,7 +6,7 @@ export const useOnScreen = ref => {
 	const observer = new IntersectionObserver(
 		([entry]) => setOnScreen(entry.isIntersecting),
 		{
-			threshold: [0.2, 0.4, 0.6, 0.8],
+			threshold: [0.25, 0.5, 0.75],
 		}
 	);
 
