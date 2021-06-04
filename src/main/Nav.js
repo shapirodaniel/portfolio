@@ -76,7 +76,7 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 			>
 				<img
 					className='easterEggIcon'
-					src={'/portfolio/easter-egg.svg'}
+					src={'/portfolio/assets/easter-egg.svg'}
 					alt={'easter-egg-icon'}
 				/>
 			</span> */}

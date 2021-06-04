@@ -31,7 +31,7 @@ const Stars = ({ children }) => {
 
 			<img
 				className='pinkMoon'
-				src='/portfolio/pink-moon.png'
+				src='/portfolio/assets/pink-moon.png'
 				alt='pink-moon'
 			/>
 		</section>

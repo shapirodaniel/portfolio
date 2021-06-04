@@ -4,19 +4,19 @@ import './ContactBtns.css';
 const links = [
 	{
 		id: 1,
-		src: '/portfolio/octocat.svg',
+		src: '/portfolio/assets/octocat.svg',
 		href: 'https://github.com/shapirodaniel',
 		alt: 'github',
 	},
 	{
 		id: 2,
-		src: '/portfolio/linked-in.svg',
+		src: '/portfolio/assets/linked-in.svg',
 		href: 'https://linkedin.com/in/shapirodanieladam',
 		alt: 'linkedin',
 	},
 	{
 		id: 3,
-		src: '/portfolio/medium.svg',
+		src: '/portfolio/assets/medium.svg',
 		href: 'https://shapirodanieladam.medium.com',
 		alt: 'medium',
 	},
