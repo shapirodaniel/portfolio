@@ -79,13 +79,13 @@ const About = () => {
 								SaaS solution for bakeries
 							</a>
 							<br />
-							Writing a{' '}
+							Creating an{' '}
 							<a
-								href='https://github.com/shapirodaniel/react-clone'
+								href='https://github.com/shapirodaniel/weather-app'
 								target='_blank'
 								rel='noreferrer'
 							>
-								React-like framework
+								OpenWeather mobile app
 							</a>
 							<br />
 							Fellow-ing at{' '}
