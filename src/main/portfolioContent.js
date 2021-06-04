@@ -60,7 +60,7 @@ export const portfolioContent = [
 		],
 		siteHref:
 			'https://medium.com/geekculture/scrollable-single-page-site-navigation-with-react-custom-hooks-4e7af716f6b1',
-		gihubHref: 'https://github.com/shapirodaniel/single-page-nav',
+		githubHref: 'https://github.com/shapirodaniel/single-page-nav',
 		linkedImgUrl: '/portfolio/sp-scrollable-medium-screencap.png',
 		linkedImgUrlAltText: 'use-nav-custom-hook',
 	},
