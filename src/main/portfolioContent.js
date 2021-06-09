@@ -60,7 +60,7 @@ export const portfolioContent = [
 				'Front-end': [
 					'React + React Context API',
 					'React Swipeable Views',
-					'vanilla CSS',
+					'Styled Components',
 				],
 			},
 		],
