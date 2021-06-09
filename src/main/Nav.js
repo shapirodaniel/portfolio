@@ -59,6 +59,21 @@ const Nav = ({ setModalVisible, setModalComponent }) => {
 				/>
 			))}
 
+			{/* resume */}
+			<a
+				id='resume'
+				href='/portfolio/docs/resume.pdf'
+				target='_blank'
+				rel='noreferrer'
+				style={{
+					color: 'inherit',
+					textDecoration: 'none',
+					marginLeft: '-.5em',
+				}}
+			>
+				<span>Resume</span>
+			</a>
+
 			{/* link to recruiter modal */}
 			{/* <span
 				id='recruiter'

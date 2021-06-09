@@ -15,8 +15,12 @@ nav span {
 	border-bottom: 1px solid transparent;
 	transition: border-bottom 0.2s ease;
 	transition-delay: 0.25s;
-	margin: 1em;
+	margin: 1em 0.7em;
 	padding-bottom: 0.3em;
+}
+
+nav span:first-child {
+	margin-left: 1em;
 }
 
 nav span:hover:not(.ee-conditionalText) {
