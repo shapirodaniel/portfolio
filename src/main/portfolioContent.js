@@ -49,6 +49,27 @@ export const portfolioContent = [
 		embedId: 'VbKLG30Nuo0',
 	},
 	{
+		id: 5,
+		logoSrc: '/portfolio/assets/openweather-mobile-logo.svg',
+		logoAltText: 'openweather-mobile-logo',
+		description:
+			'A mobile weather app with mocked Google Places location search (select US cities) and autocomplete, powered by OpenWeather OneCall, Geocoding APIs',
+		techStack: [
+			{ 'Back-end': ['Azure Functions Serverless Compute'] },
+			{
+				'Front-end': [
+					'React + React Context API',
+					'React Swipeable Views',
+					'vanilla CSS',
+				],
+			},
+		],
+		siteHref: 'https://tinyurl.com/openweather-app',
+		githubHref: 'https://github.com/shapirodaniel/weather-app',
+		linkedImgUrl: '/portfolio/assets/openweather-mobile-screencap-forecast.png',
+		linkedImgUrlAltText: 'openweather-mobile-7-day-forecast',
+	},
+	{
 		id: 2,
 		logoSrc: '/portfolio/assets/sp-scrollable-logo.svg',
 		logoAltText: 'single-page-scrollable-site-navigation',
