@@ -88,13 +88,13 @@ const About = () => {
 								OpenWeather mobile app
 							</a>
 							<br />
-							Fellow-ing at{' '}
+							Consulting on all things cloud at{' '}
 							<a
-								href='https://www.fullstackacademy.com/software-engineering-immersive'
+								href='https://www.avanade.com'
 								target='_blank'
 								rel='noreferrer'
 							>
-								Fullstack Academy
+								Avanade
 							</a>
 						</p>
 					</div>
